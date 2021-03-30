@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="160dp"
+    android:orientation="vertical"
+    android:background="#00000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_radius_back_white"
+        android:orientation="vertical"
+        android:layout_marginTop="18dp">
+
+        <TextView
+            android:id="@+id/textInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_marginTop="36dp"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="Opps!"></TextView>
+
+        <TextView
+            android:id="@+id/textPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:visibility="gone"
+            android:lineSpacingExtra="6dp"
+            android:text="€ 80"></TextView>
+
+        <TextView
+            android:id="@+id/textSaving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:visibility="gone"
+            android:lineSpacingExtra="6dp"
+            android:text="Savings with this coupon "></TextView>
+
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/colorGray"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="Coupon usage limit has reached "></TextView>
+
+        <TextView
+            android:id="@+id/textOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/redColor"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="OK"></TextView>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/offerInfo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/offer_img_info"
+        android:layout_centerHorizontal="true"></ImageView>
+
+</RelativeLayout>

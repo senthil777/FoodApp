@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.RatingFragment">
+    <TextView
+        android:id="@+id/costPerPersonTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Rating"
+        android:textColor="@color/colorGray"
+        android:textSize="14dp"></TextView>
+
+    <TextView
+        android:id="@+id/costPerPriceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/AnyPlus"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="16dp"></TextView>
+
+    <com.jaygoo.widget.VerticalRangeSeekBar
+        android:id="@+id/sb_vertical_6"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_margin="12dp"
+        app:rsb_mode="single"
+        app:rsb_indicator_show_mode="alwaysShow"
+        app:rsb_indicator_width="60dp"
+        app:rsb_indicator_height="60dp"
+
+        app:rsb_progress_color="@color/colorBlack"
+        app:rsb_step_auto_bonding="true"
+        app:rsb_step_drawable="@drawable/thumb_gradient_black_border"
+        app:rsb_step_height="10dp"
+        app:rsb_step_radius="5dp"
+        app:rsb_step_width="10dp"
+        app:rsb_steps="4"
+        app:rsb_orientation="left"
+        app:rsb_indicator_drawable="@drawable/thumb"
+        app:rsb_thumb_drawable="@drawable/thumb_gradient_green"
+        app:rsb_thumb_inactivated_drawable = "@drawable/thumb_gradient_black"
+        app:rsb_thumb_height="30dp"
+        app:rsb_tick_mark_mode="number"
+        app:rsb_progress_drawable="@color/colorGreen"
+        app:rsb_progress_drawable_default="@drawable/progress_defalut_color"
+
+        app:rsb_progress_height="3dp"
+        app:rsb_thumb_width="30dp" />
+
+
+</LinearLayout>

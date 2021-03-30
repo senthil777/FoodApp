@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/cardList"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/round_corner_detail_gray"
+        android:padding="12dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp"
+                android:text="Master Card"></TextView>
+
+            <ImageView
+                android:id="@+id/cardImg"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/cardName"></ImageView>
+
+            <ImageView
+                android:id="@+id/cardDelete"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/delete"
+                android:padding="12dp"
+                android:layout_alignParentRight="true"></ImageView>
+
+            <TextView
+                android:id="@+id/cardHolderName"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/cardImg"
+                android:layout_below="@+id/cardName"
+                android:text="kkkk"></TextView>
+
+            <TextView
+                android:id="@+id/cardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/cardImg"
+                android:layout_below="@+id/cardHolderName"
+                android:text=""></TextView>
+
+            <ImageView
+                android:id="@+id/cardSelect"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentRight="true"
+                android:padding="12dp"
+                android:visibility="gone"
+                android:src="@drawable/tick"
+                ></ImageView>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

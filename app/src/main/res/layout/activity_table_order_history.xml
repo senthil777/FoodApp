@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".Activity.OrderHistoryActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/orders_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/orders_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/orders_back"
+            android:text="@string/Orders_txt"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tableOrderHistory"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        app:tabIndicatorColor="@color/redColor"
+        app:tabIndicatorHeight="2dp"
+        app:tabMinWidth="0dp"
+        app:tabMode="fixed"
+        android:layout_marginTop="24dp"
+        app:tabSelectedTextColor="@color/redColor"
+
+        app:tabTextAppearance="@style/MyCustomTabText"
+
+        app:tabTextColor="@color/colorBlack" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:background="@color/colorGray"></View>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpagerOrderTableHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        />
+
+</LinearLayout>

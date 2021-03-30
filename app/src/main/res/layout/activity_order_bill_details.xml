@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4"
+    tools:context=".Activity.OrderBillDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/tableReservation_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/orderBill_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:text="Order#51601455665"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/orderDescription_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderBill_Title"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:text="Delivered 2 item € 310.00"
+            android:textColor="@color/colorGray"
+            android:textSize="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/redColor"
+            android:text="Help"
+            android:visibility="gone"
+            android:layout_margin="12dp"
+            android:textSize="12dp"></TextView>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/billAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:elevation="2dp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/locationIocn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/location"></ImageView>
+        <TextView
+            android:id="@+id/fromAddressTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/locationIocn"
+            android:text="Donne Biriyani House"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/fromAddressTitleDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fromAddressTitle"
+            android:layout_toRightOf="@+id/locationIocn"
+            android:text="304/305, 5th St Ext, 5th Street Extension, Gandhipuram, Tamil Nadu 641012"
+            android:textColor="@color/colorGray"
+            android:singleLine="true"
+            android:layout_marginRight="16dp"
+            android:textSize="10dp"></TextView>
+
+        <!--<View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/dot_dot_layout_gray_hor" />
+
+        <ImageView
+            android:id="@+id/dotImg"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/hotelIcon"
+            android:background="@drawable/dot_dot_layout_gray_hor"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />-->
+
+        <ImageView
+        android:id="@+id/dotImg"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:src="@drawable/dot_dot_layout_gray_hor"
+        android:layout_below="@+id/locationIocn"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layerType="software" />
+        <ImageView
+            android:id="@+id/toLocationIocn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/dotImg"
+            android:src="@drawable/location"></ImageView>
+        <TextView
+            android:id="@+id/toAddressTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/locationIocn"
+            android:layout_below="@+id/dotImg"
+            android:text="Other"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/toAddressTitleDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toAddressTitle"
+            android:layout_toRightOf="@+id/locationIocn"
+            android:text="No.45, Sambandam Rd E, R S Puram West, Coimbatore, Tamil Nadu 641002"
+            android:textColor="@color/colorGray"
+            android:singleLine="true"
+            android:layout_marginRight="16dp"
+            android:textSize="10dp"></TextView>
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/locationIocn"
+            android:layout_below="@+id/toAddressTitleDescription"
+            android:background="@color/colorGray" />
+
+        <ImageView
+            android:id="@+id/tickImg"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@+id/lineView"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/tick"></ImageView>
+
+        <TextView
+            android:id="@+id/orderDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineView"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/locationIocn"
+            android:text="Order delivered on September 15, 1:28 PM"
+            android:textColor="@color/colorGray"
+            android:singleLine="true"
+            android:layout_marginRight="16dp"
+            android:textSize="10dp"></TextView>
+    </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="36dp"
+                android:padding="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/itemNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Item Details"></TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/colorGray"></View>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/itemView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/colorGray"></View>
+                <TextView
+                    android:id="@+id/discountTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="12dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="Discount : "></TextView>
+                <TextView
+                    android:id="@+id/itemPriceTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_margin="12dp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorBlack"
+                    android:text="Total"></TextView>
+            </LinearLayout>
+
+    <TextView
+        android:id="@+id/billDetailsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="14dp"
+        android:text="Bill Details"
+        android:layout_below="@+id/billAddress"
+        android:textColor="@color/colorGray"></TextView>
+
+    <RelativeLayout
+        android:id="@+id/bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@color/colorWhite"
+        android:layout_below="@+id/billDetailsTV">
+
+        <TextView
+            android:id="@+id/billTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text="@string/Bill_Details"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/itemTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text="@string/Item_Total"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/billTV"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:id="@+id/itemPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text="€ 310.00"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/billTV"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/restaurantTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text="Restaurant Charges"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:layout_below="@+id/itemTV"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:id="@+id/restaurantPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text="€ 28.00"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/itemTV"
+            android:textSize="14dp"></TextView>
+
+        <View
+            android:id="@+id/lineViewOne"
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:layout_below="@+id/restaurantPriceTV"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/deliveryTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text="Delivery Fee"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/lineViewOne"
+            android:textSize="14dp"></TextView>
+        <TextView
+            android:id="@+id/deliveryPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text="€ 20.00"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lineViewOne"
+            android:textSize="14dp"></TextView>
+
+        <RelativeLayout
+            android:id="@+id/couponRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deliveryPriceTV">
+
+        <TextView
+            android:id="@+id/couponTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text="Coupon"
+            android:layout_marginTop="8dp"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/couponPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+
+            android:textSize="14dp"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/nifRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/couponRelativeLayout">
+
+            <TextView
+                android:id="@+id/nifLabelTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text="NIF NO"
+                android:layout_marginTop="8dp"
+                android:textSize="14dp"></TextView>
+
+            <TextView
+                android:id="@+id/nifTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text=""
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+
+                android:textSize="14dp"></TextView>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/lineViewTwo"
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+
+            android:layout_below="@+id/nifRelativeLayout"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/totalTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGray"
+            android:text="@string/paidViaCashOnDelivery"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/lineViewTwo"
+            android:textSize="12dp"></TextView>
+        <TextView
+            android:id="@+id/totalPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:text="Total   € 358.00"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lineViewTwo"
+            android:textSize="14dp"></TextView>
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/repeatImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/repeat_background"
+        android:layout_below="@+id/bill"
+        android:layout_marginTop="-3dp"
+        android:layerType="software" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/reorderTV"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14dp"
+        android:text="REORDER"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/verify_radius_button_orange"></TextView>
+
+</RelativeLayout>

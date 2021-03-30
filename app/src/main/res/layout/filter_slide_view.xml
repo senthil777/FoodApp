@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/selectView"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/redColor"></View>
+    <LinearLayout
+        android:id="@+id/filterLL"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="@color/colorGrayLight"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/filterTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:text="Sort by"></TextView>
+        <TextView
+            android:id="@+id/filterDescriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/redColor"
+            android:textSize="12dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:gravity="center"
+            android:text="Popularity"></TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

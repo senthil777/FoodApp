@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingRight="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/filterLL"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:padding="6dp"
+        android:background="@drawable/home_radius_filter_black"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/filterIM"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:rotation="90"
+            android:src="@drawable/sort"></ImageView>
+        <TextView
+            android:id="@+id/filterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/colorGrayFilter"
+            android:textSize="12dp"></TextView>
+
+        <ImageView
+            android:id="@+id/arrowIV"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/arrow_down"></ImageView>
+    </LinearLayout>
+
+
+</LinearLayout>

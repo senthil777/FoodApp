@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@color/colorLightBlue">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/abc_ic_ab_back_material">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/verifyDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/colorBlack"
+            android:textAllCaps="true"
+            android:text="@string/verify_details"></TextView>
+        <TextView
+            android:id="@+id/verify_otp_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/colorGray"
+            android:text="@string/verify_otp_number"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/otp_mobile"></ImageView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/verify_enter_otpTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_enter_otp"
+        android:textColor="@color/colorGray"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="12dp"
+        android:textAllCaps="true"
+        android:textSize="14dp"></TextView>
+
+    <com.alimuzaffar.lib.pin.PinEntryEditText
+        android:id="@+id/txt_pin_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="16dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:pinAnimationType="fromBottom"
+        app:pinLineColors="@color/colorBlack" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="12dp"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/verifyTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@color/colorGray"></TextView>
+        <TextView
+            android:id="@+id/verify_via_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textAllCaps="true"
+            android:text="Resend OTP"
+            android:textColor="#e8e8e8"></TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/verify_enter_otpBT"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/verify_radius_button_gray"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="16dp"
+        android:text="@string/verify_enter_otp"></TextView>
+
+</LinearLayout>

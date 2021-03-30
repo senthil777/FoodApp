@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/dishListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+
+        android:visibility="gone"
+        android:buttonTint="@color/redColor"
+        android:textColor="@color/colorBlack"
+        ></RadioButton>
+
+    <ImageView
+        android:id="@+id/infoRB"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/info"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
+        android:padding="4dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/dishListView"></ImageView>
+    <CheckBox
+        android:id="@+id/dishListViewCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="@color/colorBlack"></CheckBox>
+    <ImageView
+        android:id="@+id/infoCB"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/info"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
+        android:padding="4dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/priceTV"></ImageView>
+    <TextView
+        android:id="@+id/priceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="10dp"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/dishListViewCheck"
+        android:layout_marginTop="6dp"></TextView>
+
+
+
+    <View
+        android:id="@+id/viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:layout_below="@+id/priceTV"
+        android:background="@color/colorGray"></View>
+
+    <LinearLayout
+        android:id="@+id/allergensLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPage"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:layout_margin="12dp"
+            android:textSize="12dp"
+            android:text="Allergens"></TextView>
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="11dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="4dp"
+            android:text=". Contains cereals and products thereof containing gluten"></TextView>
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="11dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="4dp"
+            android:text=". Contains milk and products thereof (including lactose)"></TextView>
+
+        <TextView
+            android:id="@+id/title4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="12dp"
+            android:layout_margin="12dp"
+            android:text="Additives"></TextView>
+
+        <TextView
+            android:id="@+id/title5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="11dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="4dp"
+            android:text=". With colorant"></TextView>
+        <TextView
+            android:id="@+id/title6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="11dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="4dp"
+            android:text=". With perservative"></TextView>
+
+        <TextView
+            android:id="@+id/title7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="11dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="4dp"
+            android:text=". With antiaxidant"></TextView>
+
+        <TextView
+            android:id="@+id/title8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="11dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="Please cantact Customer Service in case you allergens or intolerances."></TextView>
+
+    </LinearLayout>
+
+</RelativeLayout>

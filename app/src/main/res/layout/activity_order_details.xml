@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".Activity.OrderDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/order_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/order_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/order_back"
+            android:text="@string/order_Title"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/order_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_Title"
+            android:layout_toRightOf="@+id/order_back"
+            android:text="@string/order_Type"
+            android:textColor="@color/colorGray"
+
+            android:textSize="10dp"></TextView>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/addressNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:background="#c1c1c1"></View>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orderAddressRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="12dp"></androidx.recyclerview.widget.RecyclerView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:background="#c1c1c1"></View>
+
+            <LinearLayout
+                android:id="@+id/addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/plus_Img"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/plus_add"></ImageView>
+
+
+            <TextView
+                android:id="@+id/orderAddressTV"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="@string/order_new_address"
+                android:layout_marginLeft="6dp"
+                android:textColor="@color/redColor"></TextView>
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/colorGray"></View>
+
+            <TextView
+                android:id="@+id/selectTypeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Select Payment Type"
+                android:textColor="@color/colorBlack"></TextView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orderOptionRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorWhite"></androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorGray"></View>
+
+            <LinearLayout
+                android:id="@+id/cardViewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/addNewCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/round_corner_detail_gray"
+                android:padding="12dp">
+
+
+                <ImageView
+                    android:id="@+id/iconPic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="6dp"
+                    android:src="@drawable/plus"
+                    android:background="@drawable/round_corner_detail_graylight"></ImageView>
+
+                <TextView
+                    android:id="@+id/addCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/addCard"
+                    android:gravity="center"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:textColor="@color/colorBlack"></TextView>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myCardRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/continueTxt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        android:textSize="14dp"
+        android:text="@string/continueTxt"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:background="@drawable/home_radius_button_orange"></TextView>
+
+</RelativeLayout>

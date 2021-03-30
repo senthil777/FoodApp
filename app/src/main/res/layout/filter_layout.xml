@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#311F1D1D"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="horizontal">
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/filterTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:text="Sort and Filters"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:id="@+id/cancel"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/close" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.35dp"
+                android:background="#484848"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/filterListRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0.35dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorGray"></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/frame_container_filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/priceRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/redColor"
+                                android:id="@+id/radioGroup">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/FilterFragmentGrocry_Popularity"
+                                    android:id="@+id/radioButton"
+                                    android:checked="true"
+                                    android:buttonTint="@color/redColor"
+                                    android:textSize="14dp" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/FilterFragmentGrocry_Rating_High_To_Low"
+                                    android:id="@+id/radioButton2"
+                                    android:checked="false"
+                                    android:buttonTint="@color/redColor"
+                                    android:layout_marginTop="8dp"
+                                    android:textSize="14dp"
+                                    android:layout_weight="0.13" />
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/FilterFragmentGrocry_Delivery_Time"
+                                    android:buttonTint="@color/redColor"
+                                    android:id="@+id/radioButton3"
+                                    android:layout_marginTop="8dp"
+                                    android:checked="false"
+                                    android:textSize="14dp" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/FilterFragmentGrocry_Low_To_High"
+                                    android:id="@+id/radioButton4"
+                                    android:layout_marginTop="8dp"
+                                    android:checked="false"
+                                    android:buttonTint="@color/redColor"
+                                    android:textSize="14dp"
+                                    android:layout_weight="0.13" />
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/FilterFragmentGrocry_High_To_Low"
+
+                                    android:id="@+id/radioButton5"
+                                    android:buttonTint="@color/redColor"
+                                    android:layout_marginTop="8dp"
+                                    android:checked="false"
+                                    android:textSize="14dp" />
+
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.35dp"
+                android:background="@color/colorGray"></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/filterClearAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:layout_weight="1.3"
+                    android:layout_margin="8dp"
+                    android:text="@string/Clear_All"
+                    android:textColor="@color/redColor"></TextView>
+
+                <TextView
+                    android:id="@+id/filterApply"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:layout_weight="0.7"
+                    android:layout_margin="8dp"
+                    android:text="@string/Apply"
+                    android:background="@drawable/home_radius_button_gray_light"
+                    android:textColor="@color/colorGray"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

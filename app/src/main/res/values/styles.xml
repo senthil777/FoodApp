@@ -1,0 +1,95 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/redColor</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/redColor</item>
+        <item name="colorControlNormal">@color/redColor</item>
+        <item name="colorControlActivated">@color/redColor</item>
+    </style>
+
+
+    <style name="ToggelButton" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/redColor</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/redColor</item>
+        <item name="colorControlNormal">@color/redColor</item>
+        <item name="colorControlActivated">@color/redColor</item>
+    </style>
+
+    <style name="TextLabelGreen" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/colorGreen</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorGreen</item>
+        <item name="colorControlNormal">@color/colorGreen</item>
+        <item name="colorControlActivated">@color/colorGreen</item>
+    </style>
+
+    <style name="Theme.AppCompat.Transparent.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="ToolBarWithNavigationBack">
+        <item name="navigationIcon">@drawable/abc_ic_ab_back_material</item>
+
+        <item name="android:textColor">#484848</item>
+    </style>
+
+    <style name="CollapsingTextAppearance" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+    <style name="CollapsingTextAppearance.Inverse">
+        <item name="android:textSize">24sp</item>
+
+        <item name="android:textColor">#484848</item>
+
+    </style>
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- RatingBar -->
+    <style name="RatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_full</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+    </style>
+
+    <style name="AppThemeRatingBar" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/redColor</item>
+        <item name="android:colorControlNormal">@color/colorGray</item>
+    </style>
+
+    <style name="AppThemeRatingBarGrocery" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/colorGreen</item>
+        <item name="android:colorControlNormal">@color/colorGray</item>
+    </style>
+
+</resources>

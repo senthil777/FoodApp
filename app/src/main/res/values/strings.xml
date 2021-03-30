@@ -1,0 +1,539 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">LieferIN</string>
+
+
+    <!---->
+
+    <string name="login_name">Username / e-mail ID</string>
+
+    <string name="login_password">Password</string>
+
+    <string name="login_confirm_password">Confirm Password</string>
+
+    <string name="login_button">Login</string>
+
+    <string name="login_ResetPassword">Reset</string>
+
+    <string name="login_account">Don\'t have account? Register</string>
+
+    <string name="login_forget_password">Forget Password?</string>
+
+    <!---->
+
+    <!---->
+
+    <string name="register_name">Name</string>
+
+    <string name="register_password">Password</string>
+
+    <string name="register_email">e-mail ID</string>
+
+    <string name="forget_text">Forget Password</string>
+
+    <string name="forget_text_description">Please enter your email address. You will receive a link to create a new password via email.</string>
+
+    <string name="register_mobile">Mobile Number</string>
+
+    <string name="register_confirm_password">Confirm Password</string>
+
+    <string name="register_address">Address</string>
+
+    <string name="register_button">Register</string>
+
+    <string name="register_update">Update</string>
+
+    <string name="register_account">Already have account? Login</string>
+
+
+    <!---->
+
+    <!---->
+
+    <string name="verify_details">Verify Details</string>
+
+    <string name="verify_otp_number">OTP send to</string>
+
+    <string name="verify_enter_otp">Enter OTP</string>
+
+    <string name="verify_via_call">Verify Via Call</string>
+
+    <string name="order_now">order Now</string>
+
+
+    <!---->
+
+    <!---->
+
+    <string name="DashBoard_recommended">Recommended for you</string>
+
+    <string name="DashBoard_viewAll">View all</string>
+
+    <string name="DashBoard_featured">Featured Restaurant</string>
+
+    <string name="searchForRestaurant">Search for restaurant and cusins..</string>
+
+    <string name="DashBoard_restaurantFamous">Popular cuisines around you</string>
+    <string name="title_activity_add_new_address">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_route">Map</string>
+
+    <!---->
+
+    <!---->
+
+    <string name="transport_id" translatable="false">123</string>
+    <string name="firebase_path" translatable="false">locations</string>
+    <string name="firebase_email" translatable="false">test@example.com</string>
+    <string name="firebase_password" translatable="false">password</string>
+
+    <string name="GCM_Api" translatable="false">AIzaSyBXiP7Rd8h84uv-TVIZEwI4NurJMcDTBhE</string>
+
+    <string name="GCM_Api_Main" translatable="false">AIzaSyAu5vm4TyW2fi3I-acXC0IeFGm_bpB0cyA</string>
+
+    <!---->
+
+    <!--- AddAddressActivity -->
+    <string name="enter_address_details">Enter address details</string>
+
+    <string name="addressSubDescriptionTV">Your Location</string>
+
+    <string name="addressEnterLocationTV">Enter Location</string>
+
+    <string name="changeText">Change</string>
+
+    <string name="addressET">Complete Address *</string>
+
+    <string name="landMarkET">Floor (Optional)</string>
+
+    <string name="howToReach">How to reach (Optional)</string>
+
+    <string name="tagText">Tag this location for later</string>
+
+    <string name="homeText">Home</string>
+
+    <string name="reservationText">Reservation</string>
+
+    <string name="favoriteText">favorite</string>
+
+    <string name="AccountText">Account</string>
+
+    <string name="workText">Work</string>
+
+    <string name="hotelText">Hotel</string>
+
+    <string name="otherText">otherText</string>
+
+    <string name="saveAddress">Save Address</string>
+
+    <string name="pleaseEnterAddress">Please enter address</string>
+
+    <!--- AddNewAddressActivtiy -->
+
+    <string name="addAddress_Title">Add New Address</string>
+
+    <string name="addAddress_Type">Enter Details</string>
+
+    <string name="addressET_new">HOUSE/FLAT/BLOCK NO</string>
+
+    <string name="landMarkET_new">LANDMARK</string>
+
+    <string name="addressSaveTV">SAVE AS</string>
+
+    <!--- AddressDetailsActivity -->
+
+    <string name="order_Title">Order</string>
+
+    <string name="order_Type">Add your address</string>
+
+    <string name="order_new_address">Add New Address</string>
+
+    <string name="orderAddressTV">orderAddressTV</string>
+
+    <string name="continueTxt">Confirm location and pay</string>
+
+    <string name="addressText">Address</string>
+
+    <!--- AddressSearch -->
+
+    <string name="addAddress_TitleSeacch">set delivery location</string>
+
+    <string name="searchEdit">Enter Address</string>
+
+    <!--- CardDetailsActivity -->
+
+    <string name="selectCard">Select Card</string>
+
+    <string name="addCard">Add New Card</string>
+
+    <string name="Card_Details">Card Details</string>
+
+    <string name="card_No">Card No.</string>
+
+    <string name="nameOnCardText">Name on card</string>
+
+    <string name="expiry_Date">Expiry Date</string>
+
+    <string name="cvv">Cvv</string>
+
+    <string name="sendTxt">send</string>
+
+    <string name="cardValidation">Please enter valid 16 card number</string>
+
+    <string name="expiryDateValidation">Please enter valid expiry date</string>
+
+    <string name="cvvValidation">Please enter valid cvv number</string>
+
+    <string name="invalidCard">Invalid card</string>
+
+    <string name="invalidExpiryDate">Invalid Expiry Date</string>
+
+    <!-- SlideMenu -->
+
+    <string name="Manage_Address">Manage Address</string>
+
+    <string name="Payment">Payment</string>
+
+    <string name="Favourites">Favourites</string>
+
+    <string name="Rererrals">Rererrals</string>
+
+    <string name="My_Orders">My Orders</string>
+
+    <string name="Table_Booking">Table Booking</string>
+
+    <string name="Offers">Offers</string>
+
+    <string name="App_Settings">App Settings</string>
+
+    <string name="Change_Language">Change Language</string>
+
+    <!-- DashBoard -->
+    <string name="Delivery">Delivery</string>
+
+    <string name="Pick_Up">Pick Up</string>
+
+    <string name="My_Order">My Order</string>
+
+    <string name="Table">Table</string>
+
+    <string name="Table_Reservation">Table Reservation</string>
+
+    <string name="Filter">Filter</string>
+
+    <string name="Details_Page">Details Page</string>
+
+    <string name="Detail_Page">Detail Page</string>
+
+    <string name="RatingValue">Rating 4.0+</string>
+
+    <string name="Profile">Profile</string>
+
+    <string name="Fastest_Delivery">Fastest Delivery</string>
+
+    <string name="Ratings">Ratings</string>
+
+    <string name="Cost">Cost</string>
+
+    <string name="Sort_by">Sort by</string>
+
+    <string name="Cuisine">Cuisine</string>
+
+    <string name="Rating">Rating</string>
+
+    <string name="Cast_per_person">Cast per person</string>
+
+    <string name="More_Filter">More Filter</string>
+
+    <string name="Track">Track</string>
+
+    <string name="Table_Booking_Lists">Table Booking Lists</string>
+
+    <string name="View_Menu">View Menu</string>
+
+    <string name="ProductDetailsPage">ProductDetailsPage</string>
+
+    <string name="Review_Page">Review Page</string>
+
+    <string name="Member_Details">Member Details</string>
+
+    <string name="View_Order">View Order</string>
+
+    <string name="View_All">View All</string>
+
+    <string name="SearchActivity">SearchActivity</string>
+
+    <string name="DetailItemAddPageActivity">DetailItemAddPageActivity</string>
+
+    <string name="Help">Help</string>
+
+    <string name="Product_List">Product List</string>
+
+    <string name="AllCategory">AllCategory</string>
+
+    <string name="All_Category">All Category</string>
+
+    <string name="Table_Details_Page">Table Details Page</string>
+
+    <string name="Details_About">Details About</string>
+
+    <string name="Add_Person">Add Person</string>
+
+    <string name="Add_Menu">Add Menu</string>
+
+    <string name="Logout">Logout</string>
+
+    <string name="Update_Profile">Update Profile</string>
+
+    <string name="CardDetails">CardDetails</string>
+
+    <string name="Login">Login</string>
+
+    <string name="GroupList">GroupList</string>
+
+    <string name="Home">Home</string>
+
+    <string name="Filter_Page">Filter Page</string>
+
+    <!-- DetailGroceryItemAddPageActivity -->
+
+    <string name="detailsDescriptionTV">Any restaurent request? We will try our best to convey it</string>
+
+    <string name="Apply_coupon">Apply coupon</string>
+
+    <string name="Bill_Details">Bill Details</string>
+
+    <string name="Item_Total">Item Total</string>
+
+    <string name="Restaurant_Charges">Restaurant Charges</string>
+
+    <string name="Delivery_Fee">Delivery Fee</string>
+
+    <string name="To_Pay">To Pay</string>
+
+    <string name="Add_Pay">Add Pay</string>
+
+    <string name="Added_Item">Added Item : </string>
+
+    <string name="Plus_Taxes">Plus Taxes</string>
+
+    <string name="Please_select_item">Please select item</string>
+
+    <!-- DetailPageActivity -->
+
+    <string name="DetailPageActivity_Away">Away</string>
+
+    <string name="DetailPageActivity_Min_Order">Min Order</string>
+
+    <string name="DetailPageActivity_For_Two">For Two</string>
+
+    <string name="DetailPageActivity_Abouts_Us">About Us</string>
+
+    <string name="DetailPageActivity_Veg_Only">Veg Only</string>
+
+    <string name="DetailPageActivity_OFF">OFF</string>
+
+    <string name="DetailPageActivity_ON">ON</string>
+
+    <string name="DetailPageActivity_View_cart">View cart</string>
+
+    <string name="DetailPageSearchActivity_search">Search for category...</string>
+
+    <!--FilterFragmentGrocry-->
+
+    <string name="FilterFragmentGrocry_Popularity">Popularity</string>
+
+    <string name="FilterFragmentGrocry_Rating_High_To_Low">Rating : High To Low</string>
+
+    <string name="FilterFragmentGrocry_Delivery_Time">Delivery Time</string>
+
+    <string name="FilterFragmentGrocry_Low_To_High">Cost : Low To High</string>
+
+    <string name="FilterFragmentGrocry_High_To_Low">Cost : High To Low</string>
+
+    <!--ForgetPasswordActivity-->
+
+    <string name="ForgetPasswordActivity_Submit">Submit</string>
+
+    <string name="ForgetPasswordActivity_Please_enter_email_id">Please enter email id</string>
+
+    <string name="HelpAndSupport">Help &amp; Support</string>
+
+    <string name="HelpAndSupportText">Help</string>
+
+    <string name="Info_Fast_Delivery">Fast Delivery</string>
+
+    <string name="Info_Secure_Payment">Secure Payment</string>
+
+    <string name="Info_Special_Offers">Special Offers</string>
+
+    <string name="Info_Five_Star_Restuarent">Five Star Restuarent</string>
+
+    <string name="Info_Description">order food online from Lieferin super fast delivery to home or office Check menu,rating and reviews</string>
+
+    <!--LocationActivity-->
+
+    <string name="LocationActivity_Search_location">Search location</string>
+
+    <string name="LocationActivity_Search_for_your_location">Search for your location...</string>
+
+    <string name="LocationActivity_Use_Current_Location">Use current location</string>
+
+    <string name="LocationActivity_Add_Address">+   Add Address</string>
+
+    <string name="LoginActivity_Sign_In">Sign In</string>
+
+    <string name="MapsActivity_select_location">Select location</string>
+
+    <string name="continueTxtConfirm">Confirm location</string>
+
+    <string name="continueTxtConfirmProceed">Confirm location &amp; Proceed</string>
+
+    <string name="paidViaCashOnDelivery">Paid via cash on delivery</string>
+
+    <string name="reorder_text">ReOrder</string>
+
+    <string name="gotoOrder_text">Re Order</string>
+
+    <string name="Payment_Completed">Payment Completed</string>
+
+    <string name="Payment_Description">We\'er send you an email with all the /nDetails od you\'r order remember you can track your order using this app</string>
+
+    <string name="Payment_Your_Order_Number">Your Order Number</string>
+
+    <string name="paymentYourOrderSuccess">Thank you!\n Enjoy Your Food</string>
+
+    <string name="myorderTV">Go To My Order</string>
+
+    <string name="myorderDeliveredOn">Order delivered on</string>
+
+    <string name="totalTV">Total : </string>
+
+    <string name="Delivered">Delivered</string>
+
+    <string name="item">item</string>
+
+    <string name="pleaseSelectAddress">Please select address</string>
+
+    <string name="Orders_txt">Orders</string>
+
+    <string name="Orders_New">NEW ORDERS</string>
+
+    <string name="Orders_Old">PAST ORDERS</string>
+
+    <string name="Orders_Payment">Payments</string>
+
+    <string name="Orders_Pay_Now">Pay Now</string>
+
+    <string name="Orders_item_pay"> items, To pay, </string>
+
+    <string name="Orders_Referrals">Referrals</string>
+
+    <string name="Orders_Invite_Earn">Invite</string>
+
+    <string name="my_text">You can get readymade food from grocery stores fro this location \n <u>Click here</u>.</string>
+
+    <string name="Orders_Referrals_Description">Refer a friend &amp; we\'ll give you &amp; your buddy \n€100 off on your next order above €199.</string>
+
+    <string name="orderReceivedValid">Valid on 30th November 2019.TCA.</string>
+
+    <string name="register_Sign_up">Sign Up</string>
+
+    <string name="register_Reset_Password">Reset Password</string>
+
+    <string name="Group_Add_Payment">Add Payment</string>
+
+    <string name="AddMenu">Menu</string>
+
+    <string name="AddPersons">Add Persons</string>
+
+    <string name="ADDGroup">ADD Group</string>
+
+    <string name="ADDIndividuals">ADD INDIVIDUALS</string>
+
+    <string name="As_a_person">Add My Self</string>
+
+    <string name="PleaseEnterName">Please enter the name</string>
+
+    <string name="PleaseEnterValidMobileNumber">Please enter valid mobile number</string>
+
+    <string name="PleaseEnterTheGroupName">Please enter the Group Name</string>
+
+    <string name="All_Categories">All Categories</string>
+
+    <string name="Search_here">Search here</string>
+
+    <string name="Minimum_Cost">Minimum Cost</string>
+
+    <string name="Maximum_Cost">Maximum Cost</string>
+
+    <string name="Price_value">₹ 0 - Any</string>
+
+    <string name="Got_Food_Delivery">Got food delivered from these top restaurant</string>
+
+    <string name="Consistency_and_quality">Consistency and quality delivered</string>
+
+    <string name="Create_list">Create a list of the most popular cuisines</string>
+
+    <string name="Everything_in_a_list">Everything in a list - go nuts!</string>
+
+    <string name="Category">Category</string>
+
+    <string name="GetInstantConfirmations">Get instant confirmations</string>
+
+    <string name="More_Info">More Info</string>
+
+    <string name="View_additional_restaurant_details">View additional restaurant details</string>
+
+    <string name="View_additional_store_details">View additional store details</string>
+
+    <string name="Copy_Location">Copy Location</string>
+
+    <string name="Get_Direction">Get Direction</string>
+
+    <string name="Sort_and_Filters">Sort and Filters</string>
+
+    <string name="Clear_All">Clear All</string>
+
+    <string name="Apply">Apply</string>
+
+    <string name="Booking_History">Booking History</string>
+
+    <string name="Offer_Coupons">Offer</string>
+
+    <string name="Invite_a_Friend">Invite a Friend</string>
+
+    <string name="Customer_Service">Customer Service</string>
+
+    <string name="Cancellation_Policy">Cancellation Policy</string>
+
+    <string name="AnyPlus">Any +</string>
+
+    <string name="OrderDelivered">Order Delivered</string>
+
+    <string name="OrderDone">DONE</string>
+
+    <string name="OrderRateYourDeliveryBy">Rate your meals by</string>
+
+    <string name="OrderRateYourDeliveryBoyBy">Rate your delivery boy by</string>
+
+    <string name="OrderDescription">Description</string>
+
+    <string name="Proceed">Proceed</string>
+
+    <string name="Select_Table">Select Table</string>
+
+    <string name="How_Many_People">How Many People</string>
+
+    <string name="Select_Date">Select Date</string>
+
+    <string name="Select_Time">Select Time</string>
+
+    <string name="Reserve_Invite">Reserve &amp; Invite</string>
+
+    <string name="delivery_around">delivery place around you</string>
+
+    <string name="welcome_text"><b>Terms and conditions </b>"</string>
+</resources>

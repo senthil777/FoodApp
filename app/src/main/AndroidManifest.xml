@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lieferin_global">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <!--<uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+<!--
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_lie"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_lie"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+
+        <activity android:name=".Activity.AppliyCoupon"></activity>
+        <activity
+            android:name=".Activity.CaptureActivityPortrait"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            tools:replace="android:screenOrientation" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
+        <activity
+            android:name=".Activity.CardEnterData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CardDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.StripePaymentGateway"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <service
+            android:name=".Service.MyFirebaseInstanceService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- SMS Receiver -->
+        <receiver android:name=".Receiver.MessageReceiver">
+            <intent-filter android:priority="99999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Activity.Route"
+            android:label="@string/title_activity_route"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Main4Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".Activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddAddressActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".Activity.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MapsInnerActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LocationActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".Activity.Main3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.FilterFragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".Activity.FilterFragmentGrocry"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".Fragment.FilterInnerPage"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".Activity.BottomSheetFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddressDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ResetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OtpVerification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.UpdateProfileFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.AddPersonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AppliyTableCoupon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.FavoriteFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.StoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.OrderCompleteActivity" />
+        <activity
+            android:name=".Activity.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ReferralActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.OrderMapDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OrderBillDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DashBoardGrpceryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DetailGroceryItemAddPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OrderGroceryHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SearchGroceryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PaymentTotalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.StripePaymentGatewayTableBooking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SplashScreen"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.AddressSearch"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SearchInnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DetailItemAddPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DetailPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DashBoardActivity"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
+        <activity
+            android:name=".Activity.OrderRatingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OtpVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddNewAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.TableReservationFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OrderHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.ProductDetailsPageFragment"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/viewStoreImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:scaleType="fitXY"
+
+                    android:src="@drawable/recommended"></ImageView>
+
+                <TextView
+                    android:id="@+id/viewOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="4dp"
+                    android:text="50% OFF"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12dp"></TextView>
+
+
+                <TextView
+                    android:id="@+id/viewRating"
+                    android:layout_width="30dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/home_radius_button_orange"
+                    android:gravity="center"
+                    android:text="4.4"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10dp"></TextView>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/viewStoreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:singleLine="true"
+                android:text="Kritunga Restaurant"
+                android:textColor="@color/colorBlack"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/viewStoreDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="South Indian, Chinese, Chat, North Indian..."
+                android:textColor="@color/colorGray"
+                android:textSize="10dp"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_margin="4dp"
+                android:background="#c1c1c1"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/ratingImage"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/star"
+                    android:padding="3dp"
+                    android:background="@drawable/round_green"></ImageView>
+
+                <TextView
+                    android:id="@+id/viewRatingValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.0"
+                    android:textSize="12dp"
+                    android:layout_toRightOf="@+id/ratingImage"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/colorBlack"></TextView>
+
+                <TextView
+                    android:id="@+id/dot1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="36dp"
+
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/viewRatingValue"
+                    android:textColor="@color/colorGray"></TextView>
+
+                <TextView
+                    android:id="@+id/viewDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.0 KM"
+                    android:textSize="12dp"
+
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/dot1"
+                    android:textColor="@color/colorBlack"></TextView>
+
+                <TextView
+                    android:id="@+id/dot2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="36dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/viewDistance"
+                    android:textColor="@color/colorGray"></TextView>
+                <TextView
+                    android:id="@+id/viewPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200 for two"
+                    android:textSize="10dp"
+                    android:visibility="gone"
+                    android:layout_toRightOf="@+id/dot2"
+                    android:textColor="@color/colorGray"></TextView>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

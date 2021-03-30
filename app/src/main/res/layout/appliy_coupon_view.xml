@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+    <LinearLayout
+        android:id="@+id/couponLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/home_cal_black_coupon"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/couponName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textAllCaps="true"
+            android:layout_margin="8dp"
+            android:layout_below="@+id/couponLayout"></TextView>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/offerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textAllCaps="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/couponLayout"></TextView>
+
+    <View
+        android:id="@+id/viewOffer"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_below="@+id/offerTV"
+        android:background="@color/colorGray"></View>
+
+    <TextView
+        android:id="@+id/offerDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/viewOffer"></TextView>
+
+    <TextView
+        android:id="@+id/applyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:textColor="#e28734"
+        android:textAllCaps="true"
+        android:layout_margin="12dp"
+        android:layout_alignParentRight="true"></TextView>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_below="@+id/relativeLayout"
+        android:background="@color/colorGray"></View>
+</RelativeLayout>

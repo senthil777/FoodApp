@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:id="@+id/priceLayout"
+    android:layout_height="wrap_content">
+
+
+
+    <RadioButton
+        android:id="@+id/dishListViewCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:buttonTint="@color/redColor"
+        android:textColor="@color/colorBlack"></RadioButton>
+
+    <RadioButton
+        android:id="@+id/dishListViewCheckGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:buttonTint="@color/colorGreen"
+        android:textColor="@color/colorBlack"></RadioButton>
+
+
+
+</RelativeLayout>

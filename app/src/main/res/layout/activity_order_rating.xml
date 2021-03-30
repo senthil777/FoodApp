@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".Activity.OrderBillDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/tableReservation_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/orderBill_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:text="Order#51601455665"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/orderDescription_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderBill_Title"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:text="Delivered 2 item € 310.00"
+            android:textColor="@color/colorGray"
+            android:textSize="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="12dp"
+            android:text="Help"
+            android:visibility="gone"
+            android:textColor="@color/redColor"
+            android:textSize="12dp"></TextView>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="72dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/redColor"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/redColor">
+
+
+
+            <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                android:id="@+id/pulsator"
+                android:layout_width="1000dp"
+                android:layout_height="500dp"
+                app:pulse_count="4"
+
+                android:layout_marginLeft="115dp"
+                android:layout_marginBottom="50dp"
+                app:pulse_duration="4000"
+                app:pulse_repeat="0"
+                app:pulse_color="@color/colorWhite"
+                app:pulse_startFromScratch="true"
+                app:pulse_interpolator="Linear">
+            </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+            <ImageView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/delivery_scooter"></ImageView>
+            <TextView
+                android:id="@+id/orderBill_Details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:layout_marginLeft="24dp"
+                android:lineSpacingExtra="6dp"
+                android:text="Wohoo! Lightening Fast \nDelivery!"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/orderBill_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:lineSpacingExtra="6dp"
+                android:layout_below="@+id/orderBill_Details"
+                android:text="in 23 minutes"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <ImageView
+            android:id="@+id/reportImg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/shopping_bag"></ImageView>
+
+        <TextView
+            android:id="@+id/orderReceived"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/reportImg"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Order Delivered"></TextView>
+
+
+        <TextView
+            android:id="@+id/orderNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reportImg"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:background="@color/colorLightDirkBlue"
+            android:layout_marginLeft="16dp"
+            android:text="DONE"></TextView>
+        <TextView
+            android:id="@+id/orderReceivedDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/orderNow"
+
+            android:layout_below="@+id/reportImg"
+            android:textColor="@color/colorGray"
+            android:textSize="12dp"
+            android:layout_marginLeft="16dp"
+            android:text="Rate your delivery by Bala Rio"></TextView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+
+        <RatingBar
+            android:id="@+id/RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:numStars="5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:id="@+id/userImg"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/restaurant_logo"></ImageView>
+
+                <EditText
+                    android:id="@+id/descriptionET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/home_radius_search_color_black"
+                    android:hint="Description"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="14dp"></EditText>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/deliveryText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:lineSpacingExtra="6dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:text="Submit"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="12dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/verify_radius_button_orange"></TextView>
+
+</RelativeLayout>

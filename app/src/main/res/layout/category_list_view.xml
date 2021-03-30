@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="8dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/cardLayout"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:gravity="center">
+    <RelativeLayout
+        android:id="@+id/filterLL"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:gravity="center"
+        android:elevation="5dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:gravity="center"
+            android:elevation="5dp"
+            android:background="@drawable/detail_circle_transprant"
+            android:orientation="vertical">
+
+
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/arrowIV"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/fruit"></de.hdodenhof.circleimageview.CircleImageView>
+    </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/filterTV"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="12dp"></TextView>
+
+</LinearLayout>

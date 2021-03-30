@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.OrderDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/addAddress_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/addAddress_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/addAddress_back"
+            android:text="Add New Address"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/addAddress_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addAddress_Title"
+            android:layout_toRightOf="@+id/addAddress_back"
+            android:text="Enter Details"
+            android:textColor="@color/colorGray"
+            android:textSize="10dp"></TextView>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+        <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".Activity.MapsActivity" >
+
+
+        </fragment>
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/google_map"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"></ImageView>
+        </RelativeLayout>
+
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingLeft="12dp"
+                android:paddingBottom="75dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/address_img"></ImageView>
+
+                    <TextView
+                        android:id="@+id/addressValueTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#484848"
+                        android:textSize="16dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="PR2 B2C"></TextView>
+
+                    <TextView
+                        android:id="@+id/addressChangeTV"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:textColor="@color/redColor"
+                        android:gravity="center"
+                        android:background="@drawable/map_radius_change"
+                        android:textSize="12dp"
+                        android:text="@string/changeText"></TextView>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/addressSubDescriptionTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="#484848"
+                    android:text="13 corporation street, Preston,Manchester,\nUnited Kingdom"></TextView>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/address_layout_name"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/addressET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="HOUSE/FLAT/BLOCK NO"
+                        android:editable="false"
+                        android:inputType="text"
+                        android:textAllCaps="false"
+                        android:textColor="#484848"
+                        android:textSize="14dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/landMark_layout_name"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/landMarkET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/landMarkET_new"
+                        android:editable="false"
+                        android:inputType="text"
+                        android:textAllCaps="false"
+                        android:textColor="#484848"
+                        android:textSize="14dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/addressSaveTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#484848"
+                    android:textSize="14dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="SAVE AS"></TextView>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/addressTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="12dp"
+                    app:tabTextColor="@color/colorBlack"
+                    app:tabSelectedTextColor="@color/colorBlack"
+                    app:tabIndicatorColor="@color/colorBlack"
+
+                    app:tabTextAppearance="@style/MyCustomTabText"
+                    app:tabMinWidth="0dp"
+                    app:tabMode="fixed"
+                    app:tabIndicatorHeight="1dp"/>
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/addressViewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_marginBottom="45dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+
+        android:layout_alignParentBottom="true">
+    <TextView
+        android:id="@+id/continueTxt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="12dp"
+        android:textSize="14dp"
+        android:text="Save Address"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:background="@drawable/home_radius_button_orange"></TextView>
+    </LinearLayout>
+</RelativeLayout>

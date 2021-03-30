@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/headerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="175dp"
+
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="12dp"
+        android:gravity="right">
+
+    <ImageView
+        android:id="@+id/editProfile"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/edit_pencil"></ImageView>
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/slideUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="John Deo"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/slideAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="47, 4th layout, 2nd phase, Germany"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:textSize="12dp"
+        ></TextView>
+
+
+
+</LinearLayout>

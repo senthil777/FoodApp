@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/login_radius_back_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tableLA"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Table Booking"
+            android:textSize="16dp"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"></TextView>
+
+        <ImageView
+            android:id="@+id/closeIMG"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="12dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close"></ImageView>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:visibility="gone"
+        android:background="@color/colorBlack"></View>
+
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_margin="12dp"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:lineSpacingExtra="6dp"
+        android:text="Thanks for your reservation \nwould you like to choose your menu?"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tableLA2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="6dp"
+            android:text="NO"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+
+            android:background="@drawable/login_radius_button_gray"></TextView>
+
+        <TextView
+            android:id="@+id/tableLA1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="6dp"
+            android:text="Yes"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            android:background="@drawable/login_radius_button_orange"></TextView>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

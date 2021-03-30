@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/itemImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/mealsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="14dp"
+        android:layout_toRightOf="@+id/itemImg"
+        android:text="@string/app_name"
+        android:layout_marginTop="2dp"
+
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="6dp"></TextView>
+
+    <TextView
+        android:id="@+id/toppinsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="12dp"
+        android:layout_below="@+id/mealsName"
+        android:layout_toRightOf="@+id/itemImg"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="6dp"></TextView>
+
+    <TextView
+        android:id="@+id/mealsDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGray"
+        android:textSize="12dp"
+        android:layout_below="@+id/toppinsName"
+        android:layout_toRightOf="@+id/itemImg"
+        android:layout_marginRight="80dp"
+        android:singleLine="true"
+        android:text="1 Vegitables,Dal makhani, 3 Roti, rice, Curd,Salad &amp; Papad"
+
+        android:layout_marginLeft="6dp"></TextView>
+    <com.github.angads25.toggle.LabeledSwitch
+        android:id="@+id/switch4"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:textSize="7sp"
+        app:on="false"
+        app:textOn="ON"
+        app:textOff="OFF"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/offerPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€ 18.00"
+        android:textSize="11dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:textColor="@color/colorGray"
+        android:visibility="gone"
+        android:layout_toLeftOf="@+id/priceText"
+        android:layout_below="@+id/switch4"></TextView>
+
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€ 18.00"
+        android:textSize="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/colorGreen"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/switch4"></TextView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.15dp"
+        android:background="@color/colorGray"
+        android:layout_below="@+id/mealsDescription"
+        android:layout_marginTop="12dp"></View>
+
+</RelativeLayout>

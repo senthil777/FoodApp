@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="280dp"
+    android:layout_height="320dp"
+    android:gravity="center"
+    android:background="@drawable/login_radius_back_white">
+
+
+        <ImageView
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:src="@drawable/success_table_booking"></ImageView>
+
+    <TextView
+        android:id="@+id/successText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Success!"
+        android:textColor="@color/colorBlack"
+        android:textSize="16dp"></TextView>
+
+    <TextView
+        android:id="@+id/successDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Would you like to select your menu?"
+        android:textColor="@color/colorBlack"
+        android:textSize="14dp"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/noTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14dp"
+            android:text="No"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/login_radius_button_gray"
+            android:textColor="@color/colorWhite"></TextView>
+
+        <TextView
+            android:id="@+id/yesTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14dp"
+            android:text="Yes"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="6dp"
+            android:background="@drawable/login_radius_button_orange"
+            android:textColor="@color/colorWhite"></TextView>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ECE8E8">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/notificationTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/orders_back"
+            android:text="Apply Coupons"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="12sp"
+        android:background="@drawable/home_cal_black_white"
+        >
+        <EditText
+            android:id="@+id/applyCouponET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="12dp"
+            android:textSize="14dp"
+            android:hint="Enter coupon Code"
+            android:background="#00000000"></EditText>
+        <TextView
+            android:id="@+id/apply"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Apply"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="14dp"
+            android:textColor="#ECB687"></TextView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/availableTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textAllCaps="true"
+        android:layout_margin="12dp"
+        android:textColor="@color/colorBlack"
+        android:text="Available Coupons"></TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/couponListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"></androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,130 @@
+{
+  "project_info": {
+    "project_number": "53671429993",
+    "firebase_url": "https://ios-lieferin.firebaseio.com",
+    "project_id": "ios-lieferin",
+    "storage_bucket": "ios-lieferin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53671429993:android:03a312292816e1cb009ff8",
+        "android_client_info": {
+          "package_name": "com.Lieferin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53671429993-r00741c868lurkk5ep8kib1bgg77mdve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBguvnESiUC2VPPgkd3zVR8P8dEGNNQ6-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53671429993-r00741c868lurkk5ep8kib1bgg77mdve.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53671429993-0qbocofq9uaedr389r3a37f4pd7ulio6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lieferin.UserApp",
+                "app_store_id": "151987151987"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53671429993:android:b859ed39162a396d009ff8",
+        "android_client_info": {
+          "package_name": "com.lieferin_global"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53671429993-r00741c868lurkk5ep8kib1bgg77mdve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBguvnESiUC2VPPgkd3zVR8P8dEGNNQ6-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53671429993-r00741c868lurkk5ep8kib1bgg77mdve.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53671429993-0qbocofq9uaedr389r3a37f4pd7ulio6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lieferin.UserApp",
+                "app_store_id": "151987151987"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53671429993:android:f16bedd3648dfa0b009ff8",
+        "android_client_info": {
+          "package_name": "com.lieferin_global_driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53671429993-813beql7j1rg3nguvu7hh3unt1plpjqm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lieferin_global_driver",
+            "certificate_hash": "ad8c32be9548afc5a334437938282788b68b3a68"
+          }
+        },
+        {
+          "client_id": "53671429993-r00741c868lurkk5ep8kib1bgg77mdve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBguvnESiUC2VPPgkd3zVR8P8dEGNNQ6-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53671429993-r00741c868lurkk5ep8kib1bgg77mdve.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53671429993-0qbocofq9uaedr389r3a37f4pd7ulio6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lieferin.UserApp",
+                "app_store_id": "151987151987"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

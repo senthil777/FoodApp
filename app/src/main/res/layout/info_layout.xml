@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/login_radius_back_white">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginRight="50dp"
+        android:textColor="@color/colorBlack"
+        android:padding="4dp"></TextView>
+        <ImageView
+            android:id="@+id/closeIcon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="15dp"
+            android:src="@drawable/close"
+            android:layout_alignParentRight="true"></ImageView>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:background="@color/colorGray"
+        android:visibility="gone"></View>
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:text="Allergens"></TextView>
+
+    <!--<TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="4dp"
+        android:text=". Contains cereals and products thereof containing gluten"></TextView>
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="4dp"
+        android:text=". Contains milk and products thereof (including lactose)"></TextView>
+
+    <TextView
+        android:id="@+id/title4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="14dp"
+        android:layout_margin="12dp"
+        android:text="Additives"></TextView>
+
+    <TextView
+        android:id="@+id/title5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="4dp"
+        android:text=". With colorant"></TextView>
+    <TextView
+        android:id="@+id/title6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="4dp"
+        android:text=". With perservative"></TextView>
+
+    <TextView
+        android:id="@+id/title7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="4dp"
+        android:text=". With antiaxidant"></TextView>
+
+    <TextView
+        android:id="@+id/title8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="Please cantact Customer Service in case you allergens or intolerances."></TextView>
+
+-->
+</LinearLayout>

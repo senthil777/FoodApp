@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.OrderDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/addAddress_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:contentDescription="Back"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.35">
+
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:context=".Activity.MapsActivity" >
+
+
+            </fragment>
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/google_map"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"></ImageView>
+        </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.65"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="75dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+                            android:id="@+id/addressValueTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#484848"
+                            android:layout_marginLeft="16dp"
+                            android:textSize="16dp"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/MapsActivity_select_location"></TextView>
+
+
+
+
+                    </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/colorGray"></View>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+
+                        android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/addressSubDescriptionTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="#A09D9D"
+                        android:textAllCaps="true"
+                        android:text="@string/addressSubDescriptionTV"></TextView>
+
+
+                        <TextView
+                            android:id="@+id/locationAddressTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:layout_marginRight="98dp"
+                            android:textColor="#353535"
+                            android:singleLine="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_below="@+id/addressSubDescriptionTV"
+                            android:text="@string/addressEnterLocationTV"></TextView>
+
+                        <TextView
+                            android:id="@+id/changeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:textSize="13dp"
+                            android:layout_marginRight="12dp"
+                            android:textColor="@color/redColor"
+                            android:textAllCaps="true"
+                            android:layout_alignParentRight="true"
+                            android:singleLine="true"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/changeText"></TextView>
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.25dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/colorGray"></View>
+            </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/continueTxt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="12dp"
+            android:textSize="14dp"
+            android:text="@string/continueTxtConfirm"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:background="@drawable/home_radius_button_orange"></TextView>
+    </LinearLayout>
+</RelativeLayout>

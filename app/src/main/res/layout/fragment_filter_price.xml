@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:padding="12dp"
+    tools:context=".Fragment.FilterPriceFragment">
+
+    <LinearLayout
+        android:id="@+id/searchLL"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_below="@+id/dotImg"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/home_radius_search_black"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search"></ImageView>
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:textColor="@color/colorBlack"
+            android:background="#00000000"
+            android:singleLine="true"
+            android:hint="@string/Search_here"></EditText>
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cuisinesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="8dp"
+    android:paddingRight="12dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:gravity="center">
+    <LinearLayout
+        android:id="@+id/filterLL"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+
+        android:elevation="5dp"
+        android:background="@drawable/detail_circle_green"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/arrowIV"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/grocery_view_all"></de.hdodenhof.circleimageview.CircleImageView>
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/filterTV"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/colorBlack"
+        android:textSize="12dp"></TextView>
+
+</LinearLayout>

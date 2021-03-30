@@ -1,0 +1,529 @@
+<resources>
+    <string name="app_name">LieferIN</string>
+
+
+    <!---->
+
+    <string name="login_name">Nome de usuário / e-mail Id</string>
+
+    <string name="login_password">palavra de passe</string>
+
+    <string name="my_text">You can get readymade food from grocery stores fro this location \n <u>Click here</u>.</string>
+
+    <string name="login_button">Inicie sessão</string>
+
+    <string name="login_ResetPassword">Redefinir</string>
+
+    <string name="login_confirm_password">Confirme a Password</string>
+
+    <string name="login_account">Não tem conta? Registro</string>
+
+    <string name="login_forget_password">Esqueceu se palavara?</string>
+
+    <!---->
+
+    <!---->
+
+    <string name="register_name">Nome</string>
+
+    <string name="register_password">palavra de passe</string>
+
+    <string name="register_email"> e-mail Id</string>
+
+    <string name="forget_text">Esqueceu se palavara</string>
+
+    <string name="forget_text_description">Por favor, indique o seu endereço de e-mail. Você receberá um link para criar uma nova senha por e-mail.</string>
+
+    <string name="register_mobile">número de telemóvel</string>
+
+    <string name="register_confirm_password">Confirme a Password</string>
+
+    <string name="register_address">Endereço</string>
+
+    <string name="register_button">Registrar</string>
+
+    <string name="register_update">atualizar</string>
+
+    <string name="register_account">tens uma conta? iniciar sessão</string>
+
+
+    <!---->
+
+    <!---->
+
+    <string name="verify_details">Verificar detalhes</string>
+
+
+    <string name="verify_otp_number">OTP enviar para</string>
+
+    <string name="verify_enter_otp">entrar otp</string>
+
+    <string name="verify_via_call">Verificar via ligação</string>
+    <!---->
+
+    <!---->
+
+    <string name="DashBoard_recommended">Recomendado para você</string>
+
+    <string name="DashBoard_viewAll">Ver tudo</string>
+
+    <string name="DashBoard_featured">Restaurante em Destaque</string>
+
+    <string name="searchForRestaurant">procurar por restaurante e cozinhas..</string>
+
+    <string name="DashBoard_restaurantFamous">Cozinha popular perto de você</string>
+    <string name="title_activity_add_new_address">Mapa</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Olá fragmento em vazio</string>
+
+    <string name="title_activity_maps">Mapa</string>
+    <string name="title_activity_route">Mapa</string>
+
+    <!---->
+
+    <!---->
+
+
+    <!---->
+
+    <!--- AddAddressActivity -->
+    <string name="enter_address_details">Insira os detalhes do endereço</string>
+
+    <string name="addressSubDescriptionTV">Sua localização</string>
+
+    <string name="addressEnterLocationTV">Enter Location</string>
+
+    <string name="changeText">mudar</string>
+
+    <string name="addressET">Endereço completo *</string>
+
+    <string name="landMarkET">Andar (opcional)</string>
+
+    <string name="howToReach">Como chegar (opcional)</string>
+
+    <string name="tagText">Marque este local para mais tarde</string>
+
+    <string name="View_Menu">View Menu</string>
+
+    <string name="homeText">Casa</string>
+
+    <string name="reservationText">Reserva</string>
+
+    <string name="favoriteText">Favoritos</string>
+
+    <string name="AccountText">Conta</string>
+
+    <string name="workText">Trabalhos</string>
+
+    <string name="hotelText">Hotel</string>
+
+    <string name="otherText">outro texto</string>
+
+    <string name="saveAddress">guardar endereco </string>
+
+    <string name="pleaseEnterAddress">Por favor insira o endereço</string>
+
+    <!--- AddNewAddressActivtiy -->
+
+    <string name="addAddress_Title">Adicionar novo endereço</string>
+
+    <string name="addAddress_Type">Insira os detalhes</string>
+
+    <string name="addressET_new">Numero de casa / apartmento/ quarteirão</string>
+
+    <string name="landMarkET_new">MARCO</string>
+
+    <string name="addressSaveTV">SALVAR COMO</string>
+
+    <!--- AddressDetailsActivity -->
+
+    <string name="order_Title">pudido</string>
+
+    <string name="order_Type">Adicione seu endereço</string>
+
+    <string name="order_new_address">Adicionar novo endereço</string>
+
+    <string name="orderAddressTV">endereço do pedido</string>
+
+    <string name="continueTxt">Confirme a localização e pagar</string>
+
+    <string name="addressText">Morada</string>
+
+    <!--- AddressSearch -->
+
+    <string name="addAddress_TitleSeacch">definir local de entrega</string>
+
+    <string name="searchEdit">Insira o endereço</string>
+    <!--- CardDetailsActivity -->
+
+    <string name="selectCard">Selecione o cartão</string>
+
+    <string name="addCard">Adicionar novo cartao</string>
+
+    <string name="Card_Details">Detalhes do cartão</string>
+
+    <string name="card_No">número do cartão.</string>
+
+    <string name="nameOnCardText">Nome no cartão</string>
+
+    <string name="expiry_Date">Data de validade</string>
+
+    <string name="cvv">Cvv</string>
+
+    <string name="sendTxt">enviar</string>
+
+    <string name="cardValidation">Insira um número válido de 16 cartões</string>
+
+    <string name="expiryDateValidation">Por favor, insira uma valida data de expiricao</string>
+
+    <string name="cvvValidation">Por favor, insira um número CVV válido</string>
+
+    <string name="invalidCard">Cartão inválido</string>
+
+    <string name="invalidExpiryDate">Data de expiricao Inválida</string>
+
+    <!-- SlideMenu -->
+
+    <string name="Manage_Address">Gerenciar endereço</string>
+
+    <string name="Payment">pagamentos</string>
+
+    <string name="Favourites">Favoritos</string>
+
+    <string name="Rererrals">Referências</string>
+
+    <string name="My_Orders">meu encomendas</string>
+
+    <string name="Table_Booking">Reserva de mesa</string>
+
+    <string name="Offers">Ofertas</string>
+
+    <string name="App_Settings">Definicoes  do aplicativo</string>
+
+    <string name="Change_Language">Mudar idioma</string>
+    <!-- DashBoard -->
+    <string name="Delivery">Entrega</string>
+
+    <string name="Pick_Up">pick up</string>
+
+    <string name="My_Order">Meu encomendas</string>
+
+    <string name="Table">Mesa</string>
+
+    <string name="Table_Reservation">Reserva de mesa</string>
+
+    <string name="Filter">Filtro</string>
+
+    <string name="Details_Page">Página de Detalhes</string>
+
+    <string name="Detail_Page">Página de Detalhes</string>
+
+    <string name="RatingValue">Avaliação 4.0+</string>
+
+    <string name="Profile">Perfil</string>
+
+    <string name="AllCategory">Todas as categorias</string>
+
+    <string name="All_Category">Todas as categorias</string>
+
+    <string name="Fastest_Delivery">Entrega mais rápida</string>
+
+    <string name="Ratings">Avaliações</string>
+
+    <string name="Cost">Custo</string>
+
+    <string name="Sort_by">Ordenar por</string>
+
+    <string name="Cuisine">Cozinha</string>
+
+    <!-- DetailGroceryItemAddPageActivity -->
+
+    <string name="detailsDescriptionTV">Qualquer pedido de restaurante? Vamos tentar o nosso melhor para transmitir isso</string>
+
+    <string name="Apply_coupon">Aplicar cupom</string>
+
+    <string name="Bill_Details">Detalhes da conta</string>
+
+    <string name="Item_Total">Total de itens</string>
+
+    <string name="Restaurant_Charges">Taxas do restaurante</string>
+
+    <string name="Delivery_Fee">Taxa de entrega</string>
+
+    <string name="To_Pay">Pagar</string>
+
+    <string name="Add_Pay">Adicionar pagamento</string>
+
+    <string name="Added_Item">Item adicionado: </string>
+
+    <string name="Plus_Taxes">Mais impostos</string>
+
+    <string name="Please_select_item">Selecione o item</string>
+
+
+    <string name="Rating">Avaliação</string>
+
+    <string name="Cast_per_person">Elenco por pessoa</string>
+
+    <string name="More_Filter">Mais Filtro</string>
+
+    <string name="Track">rastre</string>
+
+    <string name="Table_Booking_Lists">Listas de reserva de mesa</string>
+
+    <string name="ProductDetailsPage">Página de detalhes do produto</string>
+
+    <string name="Review_Page">Página de revisão</string>
+
+    <string name="Member_Details">Detalhes do membro</string>
+
+    <string name="View_Order">Ver encomenda</string>
+
+    <string name="View_All">Ver tudo</string>
+
+    <string name="SearchActivity">Atividade de procura</string>
+
+    <string name="DetailItemAddPageActivity">DetailItemAddPageActivity</string>
+
+    <string name="Help">ajuda</string>
+
+    <string name="Product_List">Lista de produtos</string>
+
+    <string name="Table_Details_Page">Table Details Page</string>
+
+    <string name="Details_About">Details About</string>
+
+    <string name="Add_Person">Adicionar Pessoa</string>
+
+
+    <string name="Add_Menu">Adicionar Menu</string>
+
+    <string name="Logout">terminar sessão</string>
+
+    <string name="Update_Profile">Atualizar perfil</string>
+
+    <string name="CardDetails">Detalhes do cartão</string>
+
+    <string name="Filter_Page">Página de filtro</string>
+
+    <string name="Login">inicio sessão</string>
+
+    <string name="GroupList">Lista de Grupo</string>
+
+    <string name="Home">início </string>
+
+    <!-- DetailPageActivity -->
+
+    <string name="DetailPageActivity_Away">Longe</string>
+
+    <string name="DetailPageActivity_Min_Order">Ordem minima</string>
+
+    <string name="DetailPageActivity_For_Two">Para dois</string>
+
+    <string name="DetailPageActivity_Abouts_Us">Sobre nós</string>
+
+    <string name="DetailPageActivity_Veg_Only">apenas vegetais</string>
+
+    <string name="DetailPageActivity_OFF">desligado</string>
+
+    <string name="DetailPageActivity_ON">ligado</string>
+
+    <string name="DetailPageActivity_View_cart">Ver carrinho</string>
+
+    <string name="DetailPageSearchActivity_search">Procurar por categoria</string>
+
+    <!--FilterFragmentGrocry-->
+
+    <string name="FilterFragmentGrocry_Popularity">Popularidade</string>
+
+    <string name="FilterFragmentGrocry_Rating_High_To_Low">Avaliação: maior para menor</string>
+
+    <string name="FilterFragmentGrocry_Delivery_Time">Tempo de entrega</string>
+
+    <string name="FilterFragmentGrocry_Low_To_High">Custo: baixo para alto</string>
+
+    <string name="FilterFragmentGrocry_High_To_Low">Custo: maior para menor</string>
+
+    <!--ForgetPasswordActivity-->
+
+    <string name="ForgetPasswordActivity_Submit">Enviar</string>
+
+    <string name="ForgetPasswordActivity_Please_enter_email_id">Por favor insira o id do email</string>
+
+    <string name="HelpAndSupport">Ajuda e Suporte</string>
+
+    <string name="HelpAndSupportText">ajuda</string>
+
+    <string name="Info_Fast_Delivery">Entrega rápida</string>
+
+    <string name="Info_Secure_Payment">Pagamento seguro</string>
+
+    <string name="Info_Special_Offers">Ofertas especiais</string>
+
+    <string name="Info_Five_Star_Restuarent">Restaurante cinco estrelas</string>
+
+    <string name="Info_Description">encomendar comida online da Lieferin entrega super rápida para casa ou escritório Verifique o menu, classificação e comentários</string>
+
+    <!--LocationActivity-->
+
+    <string name="LocationActivity_Search_location">procura Localização</string>
+
+    <string name="LocationActivity_Search_for_your_location">Pesquise seu local ...</string>
+
+    <string name="LocationActivity_Use_Current_Location">Use a localização atual</string>
+
+    <string name="LocationActivity_Add_Address">+   Adicionar Endereço</string>
+
+    <string name="LoginActivity_Sign_In">entrar</string>
+
+    <string name="MapsActivity_select_location">Selecione a localização</string>
+
+    <string name="continueTxtConfirm">Confirme a localização</string>
+
+    <string name="continueTxtConfirmProceed">confirme a localizacao e amp ;continuar</string>
+
+    <string name="paidViaCashOnDelivery">Pago em dinheiro na entrega</string>
+
+    <string name="reorder_text">Reordenar</string>
+
+    <string name="gotoOrder_text">Vá para o pedido</string>
+
+    <string name="Payment_Completed">Pagamento completo</string>
+
+    <string name="Payment_Description">Nós lhe enviaremos um e-mail com todos os / Detalhes do seu pedido, lembre-se de que você pode rastrear o seu pedido usando este aplicativo</string>
+
+    <string name="Payment_Your_Order_Number">Seu número de encomenda</string>
+
+    <string name="paymentYourOrderSuccess">Obrigado! \ E boa comida</string>
+
+    <string name="myorderTV">Vá para o meu encomenda</string>
+
+    <string name="myorderDeliveredOn">Pedido entregue em</string>
+
+    <string name="totalTV">Total: </string>
+
+    <string name="Delivered">Entregue</string>
+
+    <string name="item">item</string>
+
+    <string name="pleaseSelectAddress">por favor Selecione o endereço</string>
+
+    <string name="Orders_txt">Pedidos</string>
+
+    <string name="Orders_New">NOVAS encomenda</string>
+
+    <string name="Orders_Old">pedidos anteriores</string>
+
+    <string name="Orders_Payment">Pagamentos</string>
+
+    <string name="Orders_Pay_Now">Pague agora</string>
+
+    <string name="Orders_item_pay">itens, para pagar,</string>
+
+    <string name="Orders_Referrals">Referências</string>
+
+    <string name="Orders_Invite_Earn">Convide e ganhe</string>
+
+    <string name="Orders_Referrals_Description">Indique um amigo e nós daremos a você e ao seu amigo € 10 de desconto no seu próximo pedido acima de € 100..</string>
+
+    <string name="orderReceivedValid">Válido em 30 de novembro de 2020.TCA.</string>
+
+    <string name="register_Sign_up">Inscrever-se</string>
+
+    <string name="register_Reset_Password">Redefinir password</string>
+
+    <string name="Group_Add_Payment">Adicionar Pagamento</string>
+
+    <string name="AddMenu">menu</string>
+
+    <string name="AddPersons">Adicionar Pessoas</string>
+
+    <string name="ADDGroup">Adicionar grupo</string>
+
+    <string name="ADDIndividuals">ADICIONE INDIVÍDUOS</string>
+
+    <string name="As_a_person">Como pessoa</string>
+
+    <string name="PleaseEnterName">Por favor insira o nome</string>
+
+    <string name="PleaseEnterValidMobileNumber">Por favor, insira um número de telemóvel válido</string>
+
+    <string name="PleaseEnterTheGroupName">Por favor, entrar o nome do grupo</string>
+
+    <string name="All_Categories">todas as categorias</string>
+
+    <string name="Search_here">Procure aqui</string>
+
+    <string name="Minimum_Cost">Custo Mínimo</string>
+
+    <string name="Maximum_Cost">Custo Máximo</string>
+
+    <string name="Price_value">₹ 0 - Qualquer</string>
+
+    <string name="Got_Food_Delivery">Comida entregue neste restaurante top</string>
+
+    <string name="Consistency_and_quality">Consistência e qualidade entregues</string>
+
+    <string name="Create_list">Crie uma lista das culinárias mais populares</string>
+
+    <string name="Everything_in_a_list">Tudo em uma lista - enlouquecer!</string>
+
+    <string name="Category">Categoria</string>
+
+    <string name="GetInstantConfirmations">Obtenha confirmações instantâneas</string>
+
+    <string name="More_Info">Mais informações</string>
+
+    <string name="View_additional_restaurant_details">Ver detalhes adicionais do restaurante</string>
+
+    <string name="View_additional_store_details">View additional store details</string>
+
+    <string name="Copy_Location">Copiar localização</string>
+
+    <string name="Get_Direction">Obter direção</string>
+
+    <string name="Sort_and_Filters">Classificação e filtros</string>
+
+    <string name="Clear_All">Limpar tudo</string>
+
+    <string name="Apply">aplicar</string>
+
+    <string name="Booking_History">Histórico de reservas</string>
+
+    <string name="Offer_Coupons">Oferta e cupons</string>
+
+    <string name="Invite_a_Friend">Convidar um amigo</string>
+
+    <string name="Customer_Service">serviço ao cliente</string>
+
+    <string name="Cancellation_Policy">Política de cancelamento</string>
+
+    <string name="AnyPlus">Qualquer +</string>
+
+    <string name="OrderDone">completo</string>
+
+    <string name="OrderRateYourDeliveryBy">Avalie sua entrega por</string>
+
+    <string name="OrderRateYourDeliveryBoyBy">Rate your delivery boy by</string>
+
+    <string name="OrderDelivered">encomenda Entregue</string>
+
+    <string name="OrderDescription">Descrição</string>
+
+    <string name="Proceed">Continuar</string>
+
+    <string name="Select_Table">Selecione a mesa</string>
+
+    <string name="How_Many_People">Quantas pessoas</string>
+
+    <string name="Select_Date">Selecione a data</string>
+
+    <string name="Select_Time">Selecione o tempo</string>
+
+    <string name="Reserve_Invite">Reservar e convidar</string>
+
+    <string name="order_now">peça agora</string>
+
+    <string name="delivery_around">local de entrega perto de você</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayLight"
+    tools:context=".Activity.PaymentActivity">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/tableReservation_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <ImageView
+            android:id="@+id/mapIV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:src="@drawable/map_pin"></ImageView>
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:layout_toRightOf="@+id/mapIV"
+            android:textSize="14dp"
+            android:textColor="@color/colorBlack"
+            android:singleLine="true"
+            android:text="Home-5th Street Extension, G.."></TextView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="4dp"
+
+            android:layout_alignParentRight="true"
+            android:src="@drawable/user"></de.hdodenhof.circleimageview.CircleImageView>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoriteRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_below="@+id/header"></androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

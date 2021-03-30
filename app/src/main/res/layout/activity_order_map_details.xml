@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E4E4E4"
+    tools:context=".Activity.OrderBillDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/tableReservation_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/orderBill_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:text="Order#51601455665"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/orderDescription_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderBill_Title"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:text="Delivered 2 item € 310.00"
+            android:textColor="@color/colorGray"
+            android:textSize="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/redColor"
+            android:text="Help"
+            android:visibility="gone"
+            android:layout_margin="12dp"
+            android:textSize="12dp"></TextView>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.25"
+        tools:context=".Activity.MapsActivity" />
+                <TextView
+                    android:id="@+id/otpTV"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:text=""
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    android:background="@drawable/home_radius_button_orange_right"></TextView>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_weight="0.75">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <ImageView
+                    android:id="@+id/reportImg"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/report"></ImageView>
+
+                <TextView
+                    android:id="@+id/orderReceived"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/reportImg"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text=""></TextView>
+
+
+                <TextView
+                    android:id="@+id/orderNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reportImg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:background="@color/colorLightDirkBlue"
+                    android:layout_marginLeft="16dp"
+                    android:text=""></TextView>
+                <TextView
+                    android:id="@+id/orderReceivedDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/orderNow"
+
+                    android:layout_below="@+id/reportImg"
+                    android:textColor="@color/colorGray"
+                    android:textSize="12dp"
+                    android:singleLine="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text=""></TextView>
+
+                <LinearLayout
+                    android:id="@+id/viewLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/orderNow"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray"></View>
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="-8dp"
+                        android:src="@drawable/downwards_pointer"></ImageView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray"></View>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/prepareRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewLine">
+                <ImageView
+                    android:id="@+id/foodImg"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="16dp"></ImageView>
+
+                <TextView
+                    android:id="@+id/foodReceived"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/foodImg"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:layout_marginTop="12dp"
+                    android:text=""></TextView>
+
+
+                <TextView
+                    android:id="@+id/nextNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/foodImg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:background="@color/colorLightDirkBlue"
+                    android:layout_marginLeft="16dp"
+                    android:text="NOW"></TextView>
+
+                <TextView
+                    android:id="@+id/prpTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/nextNow"
+
+                    android:layout_below="@+id/foodReceived"
+                    android:textColor="@color/colorGray"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="6dp"
+                    android:text=""></TextView>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/driverInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewLine">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/driverImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="12dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+                    <TextView
+                        android:id="@+id/driverName"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:layout_toRightOf="@+id/driverImg"
+                        android:textColor="@color/colorBlack"></TextView>
+                    <TextView
+                        android:id="@+id/driverPhone"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text=""
+                        android:layout_below="@+id/driverName"
+                        android:layout_toRightOf="@+id/driverImg"
+                        android:textColor="@color/colorBlack"></TextView>
+                    <ImageView
+                        android:id="@+id/calImage"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="12dp"
+                        android:padding="6dp"
+                        android:src="@drawable/phone_call"
+                        android:layout_alignParentRight="true"></ImageView>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/driverAccepted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/prepareRL">
+                <LinearLayout
+                    android:id="@+id/viewLineTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray"></View>
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="-8dp"
+                        android:src="@drawable/downwards_pointer"></ImageView>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray"></View>
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/shopImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_below="@+id/viewLineTwo"></de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:id="@+id/shopReceived"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/shopImg"
+                    android:layout_below="@+id/viewLineTwo"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:layout_marginTop="12dp"
+                    android:text=""></TextView>
+
+
+                <TextView
+                    android:id="@+id/laterNow"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shopReceived"
+                    android:textColor="@color/colorGray"
+                    android:textSize="12dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:layout_toRightOf="@+id/shopImg"
+                    android:paddingRight="4dp"
+                    android:text=""></TextView>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

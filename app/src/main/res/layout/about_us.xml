@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="320dp"
+    android:paddingBottom="12dp"
+
+    android:background="@drawable/login_radius_back_white"
+
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="About Us"
+            android:textColor="@color/colorBlack"
+            android:padding="4dp"></TextView>
+        <ImageView
+            android:id="@+id/closeIcon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="15dp"
+            android:src="@drawable/close"
+            android:layout_alignParentRight="true"></ImageView>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:visibility="gone"
+        android:background="@color/colorGray"></View>
+
+    <TextView
+        android:id="@+id/contentText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14dp"
+        android:text="Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text"
+        android:textColor="@color/colorBlack"
+        android:padding="4dp"></TextView>
+</LinearLayout>

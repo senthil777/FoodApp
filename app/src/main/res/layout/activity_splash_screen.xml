@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_back"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".Activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.3"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="108dp"
+                android:layout_height="96dp"
+                android:src="@drawable/logo_lie"
+                android:padding="8dp">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/foodText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="16dp"
+                android:textSize="26dp"></TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                android:id="@+id/pulsator"
+                android:layout_width="1000dp"
+                android:layout_height="500dp"
+                app:pulse_count="4"
+
+                android:layout_marginLeft="115dp"
+                android:layout_marginBottom="50dp"
+                app:pulse_duration="4000"
+                app:pulse_repeat="0"
+                app:pulse_color="@color/colorWhite"
+                app:pulse_startFromScratch="true"
+                app:pulse_interpolator="Linear">
+            </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+            <ImageView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/delivery_scooter"></ImageView>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

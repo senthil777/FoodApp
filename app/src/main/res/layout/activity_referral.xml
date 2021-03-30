@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4"
+    android:orientation="vertical"
+    tools:context=".Activity.OrderBillDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/tableReservation_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/orderBill_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:text="@string/Orders_Referrals"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/orderDescription_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderBill_Title"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:text="@string/Orders_Invite_Earn"
+            android:textColor="@color/colorGray"
+            android:textSize="10dp"></TextView>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.85"
+        android:background="#31394f"
+        android:gravity="center"
+        android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:src="@drawable/share"></ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:layout_weight="1.15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/orderReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/reportImg"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:textAllCaps="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/Rererrals"></TextView>
+
+
+
+            <TextView
+                android:id="@+id/orderReceivedDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/orderNow"
+                android:layout_below="@+id/reportImg"
+                android:textColor="@color/colorGray"
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/Orders_Referrals_Description"></TextView>
+        <TextView
+            android:id="@+id/orderReceivedValid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/orderNow"
+             android:layout_marginTop="6dp"
+            android:layout_below="@+id/reportImg"
+            android:textColor="@color/colorGray"
+            android:textSize="10dp"
+            android:visibility="gone"
+            android:layout_marginLeft="16dp"
+            android:text="@string/orderReceivedValid"></TextView>
+
+
+    </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/buttonText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:text="@string/Orders_Invite_Earn"
+        android:background="@drawable/home_radius_button_orange"
+        ></TextView>
+</RelativeLayout>

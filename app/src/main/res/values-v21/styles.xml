@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+
+
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.AppCompat.Transparent.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+    <style name="ToolBarWithNavigationBack">
+        <item name="navigationIcon">@drawable/abc_ic_ab_back_material</item>
+
+    </style>
+    <style name="CollapsingTextAppearance" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+    <style name="CollapsingTextAppearance.Inverse" >
+        <item name="android:textSize">24sp</item>
+
+    </style>
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- RatingBar -->
+    <style name="RatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_full</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/redColor</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/redColor</item>
+        <item name="colorControlNormal">@color/redColor</item>
+        <item name="colorControlActivated">@color/redColor</item>
+    </style>
+
+
+</resources>

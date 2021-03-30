@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/login_radius_back_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tableLA"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Add Person"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp"></TextView>
+
+        <ImageView
+            android:id="@+id/closeIMG"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/close"
+            android:visibility="gone"></ImageView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:background="@color/colorBlack"></View>
+
+    <EditText
+        android:id="@+id/enterUserName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/home_cal_black"
+        android:hint="Name"
+        android:inputType="textCapSentences"
+        android:paddingLeft="12dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorGray"
+        android:textSize="14dp"></EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/home_cal_black">
+
+        <RelativeLayout
+            android:id="@+id/countryCodeRL"
+            android:layout_width="64dp"
+            android:layout_height="48dp">
+
+            <TextView
+                android:id="@+id/countryCodeTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:gravity="center"
+                android:text="- - -"
+                android:textColor="@color/colorBlack"></TextView>
+
+
+            <View
+                android:layout_width="0.25dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorBlack"></View>
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/enterMobile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/countryCodeRL"
+            android:background="#00000000"
+            android:hint="Mobile Number"
+            android:inputType="numberDecimal"
+            android:paddingLeft="12dp"
+            android:maxLength="10"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray"
+            android:textSize="14dp"></EditText>
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/enterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/home_cal_black"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="12dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorGray"
+        android:textSize="14dp"></EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/CancelTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_radius_button_gray"
+            android:gravity="center"
+            android:text="No"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/submitTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_radius_button_orange"
+            android:gravity="center"
+            android:text="Yes"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"></TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

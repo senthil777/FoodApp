@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/restaurantFamousTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#2d2d2d"
+        android:layout_marginLeft="12dp"
+        android:textSize="18dp"
+        android:text=""></TextView>
+
+        <TextView
+            android:id="@+id/restaurantDescriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGray"
+            android:textSize="12dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="12dp"
+            android:layout_below="@+id/restaurantFamousTV"
+            android:text="@string/Everything_in_a_list"></TextView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewAllRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/restaurantDescriptionTV"
+        android:orientation="vertical"></androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+</LinearLayout>

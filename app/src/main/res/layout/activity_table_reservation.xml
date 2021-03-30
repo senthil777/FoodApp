@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".Fragment.TableReservationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorWhite"
+            android:elevation="5dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/tableReservation_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+            <TextView
+                android:id="@+id/orderBill_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/tableReservation_back"
+                android:text="@string/Table_Reservation"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp"></TextView>
+
+            <TextView
+                android:id="@+id/orderDescription_Type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderBill_Title"
+                android:layout_toRightOf="@+id/tableReservation_back"
+                android:text="@string/Select_Table"
+                android:textColor="@color/colorGray"
+                android:textSize="10dp"></TextView>
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/chooseTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:text="Choose Table"
+                    android:visibility="gone"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14dp"></TextView>
+
+                ​​
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tableSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E7E7E7"
+                    >
+                    
+
+                </androidx.recyclerview.widget.RecyclerView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/book_table"></ImageView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:scaleType="fitXY"
+                            android:rotation="180"
+                            android:src="@drawable/book_table"></ImageView>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/noOfPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:text="@string/How_Many_People"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14dp"></TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/personRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/minus"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/detail_circle_black"
+                        android:padding="6dp"
+                        android:src="@drawable/minus"></ImageView>
+
+
+                    <TextView
+                        android:id="@+id/textCount"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp"></TextView>
+
+                    <ImageView
+                        android:id="@+id/plus"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/detail_circle_black"
+                        android:padding="6dp"
+                        android:src="@drawable/plus"></ImageView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorBlack"></View>
+
+                <TextView
+                    android:id="@+id/selectDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:text="@string/Select_Date"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14dp"></TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/calenderRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/selectTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/Select_Time"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14dp"></TextView>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    app:tabBackground="@drawable/tab_color_back"
+                    app:tabIndicatorColor="?android:attr/textColorPrimaryInverse"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMinWidth="0dp"
+                    android:visibility="gone"
+                    app:tabMode="fixed"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="6dp"
+                    app:tabSelectedTextColor="@color/colorWhite"
+
+                    app:tabTextAppearance="@style/MyCustomTabText"
+
+                    app:tabTextColor="@color/colorBlack" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="125dp"
+                    android:layout_marginBottom="50dp"
+                     />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/timeRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginBottom="40dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/reserveTV"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/Reserve_Invite"
+        android:textColor="@color/colorWhite"
+        android:textSize="14dp"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_radius_button_orange"
+        ></TextView>
+
+</RelativeLayout>

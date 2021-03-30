@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addGroupRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Activity.PaymentActivity">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/tableReservation_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/orderBill_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tableReservation_back"
+            android:text="@string/Add_Person"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+
+
+    </RelativeLayout>
+           <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_below="@+id/header"
+            android:orientation="vertical">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addPersonRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"></androidx.recyclerview.widget.RecyclerView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addIndividualsPersonRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <CheckBox
+        android:id="@+id/checkPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addIndividualsPersonRecyclerView"
+        android:text="@string/As_a_person"></CheckBox>
+
+    <LinearLayout
+        android:id="@+id/addPersonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_below="@+id/checkPerson"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@drawable/login_radius_button_green"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/addIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/add"></ImageView>
+    <TextView
+        android:id="@+id/addTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ADDIndividuals"
+        android:textColor="@color/colorWhite"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"></TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/addGroupTV"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/ADDGroup"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            android:textAllCaps="true"
+            android:layout_weight="1"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/home_radius_button_green"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/addPersonTV"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/ForgetPasswordActivity_Submit"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            android:textAllCaps="true"
+            android:layout_weight="1"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/home_radius_button_orange"
+            ></TextView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#ec272b</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorWhitelight">#FDFDFD</color>
+
+    <color name="redColor">#ec272b</color>
+
+    <color name="redColorLight">#E96D6F</color>
+
+    <color name="redLightColor">#97EEB2B3</color>
+
+    <color name="colorBlack">#484848</color>
+
+    <color name="colorBlackBrown">#C7AAA8</color>
+
+    <color name="colorBlackDirk">#000000</color>
+
+    <color name="colorGray">#ACACAC</color>
+
+    <color name="colorGrayFilter">#979797</color>
+
+    <color name="colorGreen50">#802ED184</color>
+
+    <color name="colorProgress">#ffffbb33</color>
+
+    <color name="colorProgressLight">#fffae6</color>
+
+    <color name="colorProgressDefault">#FFD7D7D7</color>
+
+    <color name="colorRed">#F44336</color>
+
+    <color name="colorGrayLight">#F0EFEF</color>
+
+    <color name="colorGrayBack">#e8e8e8</color>
+
+    <color name="colorLightBlue">#E7EEFC</color>
+
+    <color name="colorLightDirkBlue">#D0DEFC</color>
+
+    <color name="colorBlue">#4079F1</color>
+
+    <color name="colorGreen">#7DC77D</color>
+
+    <color name="colorGreenDrack">#20BD20</color>
+
+    <color name="colorLightWhiteBlue">#EEF2FA</color>
+
+    <color name="colorLightWhiteYellow">#FFFBEA</color>
+
+    <color name="backLightColor">#CBCBDD</color>
+
+    <color name="colorBlackBr">#F1EBEB</color>
+
+    <color name="colorBlackLight">#5a5a5a</color>
+
+    <color name="colorgray">#999999</color>
+
+    <color name="colorRose">#e8104a</color>
+
+        <color name="trans">#00FFFFFF</color>
+
+</resources>

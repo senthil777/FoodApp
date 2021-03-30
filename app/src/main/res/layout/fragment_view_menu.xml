@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".Activity.OrderHistoryActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/orders_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/abc_ic_ab_back_material"></ImageView>
+
+
+        <TextView
+            android:id="@+id/orders_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/orders_back"
+            android:text="@string/View_Menu"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"></TextView>
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/payNowTV"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/home_radius_button_orange"
+        android:textAllCaps="true"
+        android:textSize="14dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="14dp"
+        android:text="@string/Orders_Pay_Now"
+        android:gravity="center"></TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewMenuRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/totalPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textSize="14dp"
+
+        android:layout_below="@+id/viewMenuRecyclerView"
+        android:textColor="@color/colorBlack"
+        android:layout_margin="14dp"
+        android:gravity="right"></TextView>
+
+</RelativeLayout>

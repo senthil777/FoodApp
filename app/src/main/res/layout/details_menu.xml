@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/details_item_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:visibility="gone"></de.hdodenhof.circleimageview.CircleImageView>
+
+
+
+            <TextView
+                android:id="@+id/details_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlackDirk"
+                android:text="Starters"></TextView>
+
+            <ImageView
+                android:id="@+id/details_item_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="6dp"
+                android:visibility="gone"
+                android:background="@drawable/detail_circle_orange"
+                android:src="@drawable/arrow"></ImageView>
+
+        </LinearLayout>
+            <View
+                android:id="@+id/visibleView"
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="#c1c1c1"></View>
+
+        </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/details_item_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
