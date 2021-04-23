@@ -38,7 +38,7 @@ class WorkExperience() : BaseRS(), Serializable, Parcelable {
 
     var productId : String?=null
 
-    var uomId : String?=null
+    var offerType : String?=null
 
     var productName : String?=null
 
@@ -122,7 +122,7 @@ class WorkExperience() : BaseRS(), Serializable, Parcelable {
 
     var minimumOrder:String? = null
 
-    var dishCategoryId : String? = null
+    var website : String? = null
 
     var blockImageList: MutableList<ImageINfo>? = null
 

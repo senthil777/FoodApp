@@ -449,7 +449,7 @@ class OrderDetailsActivity : Activity(),View.OnClickListener,OrderSelectAdapter.
             "","","","","","","","","","",
             adapterProductList
         )
-
+        adapterProduct.add(productModel)
         orderSelectAdapter!!.notifyDataSetChanged()
     }
 
@@ -923,6 +923,19 @@ class OrderDetailsActivity : Activity(),View.OnClickListener,OrderSelectAdapter.
         }else if(select_payment.equals("3")){
 
             Constant.PayMentType = "3"
+            //processPayment()
+            var intent = Intent(this, StripePaymentGateway::class.java)
+
+            intent.putExtra("Total Amount", "" + total_value)
+
+            intent.putExtra("Address_Reference", "" + addressReferenceCode)
+
+            intent.putExtra("item", "" + itemValue)
+
+            startActivity(intent)
+        }else if(select_payment.equals("1")){
+
+            Constant.PayMentType = "1"
             //processPayment()
             var intent = Intent(this, StripePaymentGateway::class.java)
 

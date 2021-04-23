@@ -125,7 +125,7 @@ class DetailedItemAddViewAdapter(context: Context, adapterModels: List<Product>)
 
         //var totalValue = addIncreasePrice(adapterModels[position].menuId,adapterModels[position].offerPrice)
 
-       var totalValue = addIncreasePriceHole(""+adapterModels[position].menuId,adapterModels[position].price!!)
+        var totalValue = addIncreasePriceHole(""+adapterModels[position].menuId,adapterModels[position].price!!)
 
         holder.add_item_price.setText("€ "+DecimalFormat("##.##").format(totalValue))
 
@@ -143,14 +143,45 @@ class DetailedItemAddViewAdapter(context: Context, adapterModels: List<Product>)
 
             if(addDecrease(holder.add_item_increase.text as String) > 0) {
 
-                holder.add_item_price.text = "€ " +DecimalFormat("##.##").format(minusPriceDouble(
-                    holder.add_item_price.text as String,
-                    ""+adapterModels[position].menuId).toString().toDouble())
 
-                holder.add_item_increase.text =
-                    addDecrease(holder.add_item_increase.text as String).toString()
 
-                mCallback!!.setOnMaterial(adapterModels[position],true,holder.add_item_price.text.toString().replace("€ ",""),holder.add_item_increase.text.toString().toInt())
+                if(adapterModels[position].typeView.equals("4")) {
+
+                    if(addDecreaseType(holder.add_item_increase.text as String) > 0) {
+
+                        holder.add_item_increase.text =
+                            addDecreaseType(holder.add_item_increase.text as String).toString()
+
+                        holder.add_item_price.text = "€ " + DecimalFormat("##.##").format(
+                            minusPriceDouble(
+                                holder.add_item_price.text as String,
+                                buyOneGetOne("" + adapterModels[position].menuId).toString()
+                            ).toDouble()
+                        )
+                        mCallback!!.setOnMaterial(
+                            adapterModels[position],
+                            true,
+                            holder.add_item_price.text.toString().replace("€ ", ""),
+                            holder.add_item_increase.text.toString().toInt()
+                        )
+
+                    }else{
+                        mCallback!!.setOnAddText(adapterModels[position].menuReferenceCode)
+                    }
+                }else{
+
+                    holder.add_item_increase.text =
+                        addDecrease(holder.add_item_increase.text as String).toString()
+
+
+
+                    holder.add_item_price.text = "€ " +DecimalFormat("##.##").format(minusPriceDouble(
+                        holder.add_item_price.text as String,
+                        ""+adapterModels[position].menuId).toString().toDouble())
+                    mCallback!!.setOnMaterial(adapterModels[position],true,holder.add_item_price.text.toString().replace("€ ",""),holder.add_item_increase.text.toString().toInt())
+
+                }
+
 
 
                 //holder.add_item_namePrice.setText(holder.add_item_increase.text as String+" * "+adapterModels[position].ratingText+" = "+holder.add_item_price.text as String)
@@ -162,10 +193,20 @@ class DetailedItemAddViewAdapter(context: Context, adapterModels: List<Product>)
 
         holder.add_item_plus.setOnClickListener(View.OnClickListener {
 
-            holder.add_item_price.text = "€ "+ DecimalFormat("##.##").format(addPriceDouble(""+adapterModels[position].menuId,
-                addIncreaseDoubleValue(holder.add_item_increase.text as String)).toString().toDouble())
+            if(adapterModels[position].typeView.equals("4")) {
+                holder.add_item_increase.text = addIncreaseDoubleOrderValue(holder.add_item_increase.text as String).toString()
 
-            holder.add_item_increase.text = addIncrease(holder.add_item_increase.text as String).toString()
+                holder.add_item_price.text = "€ "+ DecimalFormat("##.##").format(addPriceDouble(""+adapterModels[position].menuId,
+                    holder.add_item_increase.text.toString().toInt()))
+
+            }else{
+                holder.add_item_increase.text =
+                    addIncrease(holder.add_item_increase.text as String).toString()
+
+                holder.add_item_price.text = "€ "+ DecimalFormat("##.##").format(addPriceDouble(""+adapterModels[position].menuId,
+                    addIncreaseDoubleValue(holder.add_item_increase.text as String)).toString().toDouble())
+
+            }
 
             mCallback!!.setOnMaterial(adapterModels[position],true,holder.add_item_price.text.toString().replace("€ ",""),holder.add_item_increase.text.toString().toInt())
 

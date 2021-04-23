@@ -200,6 +200,12 @@ class DetailedViewAdapter(
             holder.item_sub_TV.setText(adapterModels[position].name)
         }
 
+        if(adapterModels.get(position).offerType!!.equals("4"))
+        {
+            holder.textIncrement.text = "2"
+        }else{
+            holder.textIncrement.text = "1"
+        }
 
 
         holder.item_sub_description_TV.setTypeface(fontStyle(context, "Light"))
@@ -214,30 +220,50 @@ class DetailedViewAdapter(
 
         holder.textPrice.setTypeface(fontStyle(context, "SemiBold"))
 
-        if(adapterModels.get(position).offer.equals("0")) {
-            holder.textPrice.setText(DecimalFormat("##.##").format(adapterModels.get(position).price!!.toDouble()) + " € ")
-            holder.textPriceOffer.visibility = View.GONE
-        }else {
-            if(Constant.BookingType!!.equals("0")) {
-                holder.textPriceOffer.visibility = View.VISIBLE
 
-                holder.textPrice.setText(DecimalFormat("##.##").format(adapterModels.get(position).offer!!.toDouble()) + " € ")
 
-                holder.textPriceOffer.setText(
-                    DecimalFormat("##.##").format(
-                        adapterModels.get(
-                            position
-                        ).price!!.toDouble()
-                    ) + " € "
-                )
-
-                holder.textPriceOffer.setTypeface(fontStyle(context, "Light"))
-
-                holder.textPriceOffer.setPaintFlags(holder.textPriceOffer.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
-            }else{
+            if (adapterModels.get(position).offer.equals("0")) {
                 holder.textPrice.setText(DecimalFormat("##.##").format(adapterModels.get(position).price!!.toDouble()) + " € ")
                 holder.textPriceOffer.visibility = View.GONE
-            }
+            } else {
+
+                if(!adapterModels.get(position).offerType.equals("4")) {
+                if (Constant.BookingType!!.equals("0")) {
+                    holder.textPriceOffer.visibility = View.VISIBLE
+
+                    holder.textPrice.setText(
+                        DecimalFormat("##.##").format(
+                            adapterModels.get(
+                                position
+                            ).offer!!.toDouble()
+                        ) + " € "
+                    )
+
+                    holder.textPriceOffer.setText(
+                        DecimalFormat("##.##").format(
+                            adapterModels.get(
+                                position
+                            ).price!!.toDouble()
+                        ) + " € "
+                    )
+
+                    holder.textPriceOffer.setTypeface(fontStyle(context, "Light"))
+
+                    holder.textPriceOffer.setPaintFlags(holder.textPriceOffer.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
+                } else {
+                    holder.textPrice.setText(
+                        DecimalFormat("##.##").format(
+                            adapterModels.get(
+                                position
+                            ).price!!.toDouble()
+                        ) + " € "
+                    )
+                    holder.textPriceOffer.visibility = View.GONE
+                }
+            }else{
+                    holder.textPrice.setText(DecimalFormat("##.##").format(adapterModels.get(position).price!!.toDouble()) + " € ")
+                    holder.textPriceOffer.visibility = View.GONE
+                }
         }
 
         holder.totalValPrice.setTypeface(fontStyle(context, "SemiBold"))
@@ -398,29 +424,62 @@ class DetailedViewAdapter(
 
         holder.priceAdd.setOnClickListener(View.OnClickListener {
 
-            holder.textIncrement!!.setText(
-                "" +
-                        addIncreasePrice(holder.textIncrement!!.text.toString(), "1").toInt()
-            )
+            if(adapterModels.get(position).offerType!!.equals("4"))
+            {
+                holder.textIncrement!!.setText(
+                    "" +
+                            addIncreaseDoubleOrderValue(holder.textIncrement!!.text.toString()).toInt()
+                )
 
-            Log.v("jjjjj","===="+valueInt);
+                Log.v("jjjjj", "====" + valueInt);
 
-            add =addIncreasePrice(""+valueInt!!,
-                holder.textPrice!!.text.toString().replace(" €","")
-            ).toDouble()
-            holder.totalValPrice.text = "€ " + DecimalFormat("##.##").format(MultipleIncreasePrice(""+
-                    add!!,
-                holder.textIncrement!!.text.toString()
-            ).toDouble())
+                add = addIncreasePriceByeOneGetOne(
+                    "" + valueInt!!,
+                    holder.textPrice!!.text.toString().replace(" €", "")
+                ).toDouble()
+                holder.totalValPrice.text = "€ " + DecimalFormat("##.##").format(
+                    MultipleIncreasePrice(
+                        "" +
+                                add!!,
+                        holder.textIncrement!!.text.toString()
+                    ).toDouble()
+                )
+            }else {
+                holder.textIncrement!!.setText(
+                    "" +
+                            addIncreasePrice(holder.textIncrement!!.text.toString(), "1").toInt()
+                )
+
+                Log.v("jjjjj", "====" + valueInt);
+
+                add = addIncreasePrice(
+                    "" + valueInt!!,
+                    holder.textPrice!!.text.toString().replace(" €", "")
+                ).toDouble()
+                holder.totalValPrice.text = "€ " + DecimalFormat("##.##").format(
+                    MultipleIncreasePrice(
+                        "" +
+                                add!!,
+                        holder.textIncrement!!.text.toString()
+                    ).toDouble()
+                )
+            }
 
             mCallback!!.setOnQuantity(""+holder.textIncrement!!.text,""+adapterModels[position].menuId)
         })
 
         holder.addPriceLL.setOnClickListener(View.OnClickListener {
 
-            val finalValue: Double = holder.totalValPrice.text.toString().replace("€ ","").toDouble()
 
-            Constant.valueStringItem =""+holder.textIncrement!!.text.toString()
+
+                var finalValue: Double =
+                    holder.totalValPrice.text.toString().replace("€ ", "").toDouble()
+
+                Constant.valueStringItem = "" + holder.textIncrement!!.text.toString()
+            if(adapterModels.get(position).offerType!!.equals("4")) {
+
+                finalValue = finalValue / 2
+            }
 
             mCallback!!.setFinal("0", finalValue.toDouble(), ""+adapterModels[position].menuId, ""+adapterModels[position].toppinsGroupList!!.size)
             adapterModels.get(position).allergy1 = "0"
@@ -436,8 +495,6 @@ class DetailedViewAdapter(
                                 "1"
                             ).toInt()
                 )
-
-
                 Constant.valueStringItem =""+holder.textIncrement!!.text.toString()
                 holder.totalValPrice.text = "€ " + DecimalFormat("##.##").format(MultipleIncreasePrice(""+
                         add!!,

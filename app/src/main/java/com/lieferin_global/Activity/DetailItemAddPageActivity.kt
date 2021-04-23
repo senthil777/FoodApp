@@ -679,7 +679,7 @@ class DetailItemAddPageActivity : Activity(),View.OnClickListener,DetailedItemAd
                 "4.0",
                 ""+addVal,
                 ""+addPrice,
-                "","","","","","","","","","",
+                ""+dbHelper!!.getMenu().get(i).offerType,"","","","","","","","","",
 
                 adapterProductList
             )

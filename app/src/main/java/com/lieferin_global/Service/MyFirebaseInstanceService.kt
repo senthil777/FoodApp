@@ -28,7 +28,6 @@ class MyFirebaseInstanceService : FirebaseMessagingService() {
         )
         Log.v("Notification"+remoteMessage.notification!!.title,"Value")
 
-
     }
 
     @SuppressLint("ServiceCast")

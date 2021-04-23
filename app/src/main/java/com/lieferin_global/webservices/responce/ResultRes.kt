@@ -315,6 +315,8 @@ class ResultRes() : BaseRS(), Serializable,Parcelable {
 
     var key : String? = null
 
+
+
     var restaurantOpenStatus : String? = null
 
     var restaurantData: WorkExperience? = null

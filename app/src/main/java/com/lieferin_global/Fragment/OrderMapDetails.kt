@@ -56,6 +56,7 @@ import kotlin.random.Random
 
 class OrderMapDetails : Fragment() , OnMapReadyCallback,View.OnClickListener,ResponseListener {
     private val REQUEST_PHONE = 23
+
     var rootView : View? = null
 
     var orderBill_Title : TextView? = null

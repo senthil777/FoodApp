@@ -7,10 +7,8 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import com.lieferin_global.Model.*
-import com.lieferin_global.Utility.Constant
-import com.lieferin_global.Utility.addIncreasePrice
+import com.lieferin_global.Utility.*
 import com.lieferin_global.Utility.addIncreasePriceDivide
-import com.lieferin_global.Utility.addIncreasePriceHole
 import com.lieferin_global.webservices.request.DetailsINfo
 import com.lieferin_global.webservices.responce.ResultRes
 import com.lieferin_global.webservices.responce.WorkExperience
@@ -32,7 +30,7 @@ class DBHelper(context: Context?) :
 
         val CREATE_MENU_INFO_TABLE =
             ("CREATE TABLE " + MENU_INFO_TABLE_NAME + "("
-                    + MENU_ID + " INTEGER PRIMARY KEY," + MENU_CATEGORY_ID + " TEXT," + MENU_PRICE + " TEXT,"  + MENU_NAME + " TEXT," + MENU_REFERENCE_CODE + " TEXT,"+MENU_QUANTITY +" TEXT," +MENU_RESTAURANT_ID +" TEXT," + MENU_NOTES_ID +" TEXT," + MENU_PRICE_TOTAL + " TEXT" + ")")
+                    + MENU_ID + " INTEGER PRIMARY KEY," + MENU_CATEGORY_ID + " TEXT," + MENU_PRICE + " TEXT,"  + MENU_NAME + " TEXT," + MENU_REFERENCE_CODE + " TEXT,"+MENU_QUANTITY +" TEXT," +MENU_RESTAURANT_ID +" TEXT," + MENU_NOTES_ID +" TEXT,"+ MENU_PRICE_TOTAL +" TEXT," + MENU_INFO_OFFER_TYPE + " TEXT" + ")")
 
         val CREATE_TOPPINS_GROUP_INFO_TABLE =
             ("CREATE TABLE " + TOPPINS_GROUP_INFO_TABLE_NAME + "("
@@ -302,6 +300,7 @@ class DBHelper(context: Context?) :
             values.put(MENU_NAME, adapterProductListView!!.name)
             values.put(MENU_REFERENCE_CODE, adapterProductListView!!.toppinsId)
             values.put(MENU_PRICE, adapterProductListView!!.toppinsGroupId)
+
             values.put(MENU_NOTES_ID, "")
             // Inserting Row
             db.insert(MENU_INFO_TABLE_NAME, null, values)
@@ -316,11 +315,28 @@ class DBHelper(context: Context?) :
         values.put(MENU_ID, userInfo.menuId)
         values.put(MENU_CATEGORY_ID, userInfo.categoryId)
         values.put(MENU_RESTAURANT_ID, restaurant)
-        values.put(MENU_QUANTITY, Constant.valueStringItem)
-        values.put(MENU_PRICE_TOTAL, addIncreasePriceDivide(totalPrice,Constant.valueStringItem))
+        if(userInfo!!.offerType.equals("4")) {
+
+            var quantity =  Constant.valueStringItem.toInt() + Constant.valueStringItem.toInt()
+
+            values.put(MENU_QUANTITY, quantity)
+
+            values.put(MENU_PRICE_TOTAL, addIncreasePriceDivideBuyOne(""+totalPrice))
+
+            values.put(MENU_PRICE, addIncreasePriceDivideBuyOne(""+userInfo.price))
+        }else {
+            values.put(MENU_QUANTITY, Constant.valueStringItem)
+
+            values.put(MENU_PRICE_TOTAL, addIncreasePriceDivide(totalPrice,Constant.valueStringItem))
+
+            values.put(MENU_PRICE, userInfo.price)
+        }
+
         values.put(MENU_NAME, userInfo.name)
         values.put(MENU_REFERENCE_CODE, userInfo.menuReferenceCode)
-        values.put(MENU_PRICE, userInfo.price)
+
+
+        values.put(MENU_INFO_OFFER_TYPE, userInfo!!.offerType)
         values.put(MENU_NOTES_ID, "")
         // Inserting Row
         db.insert(MENU_INFO_TABLE_NAME, null, values)
@@ -1216,6 +1232,8 @@ class DBHelper(context: Context?) :
                     contact.blockName = cursor.getString(7)
 
                     contact.totalPrice = cursor.getString(8)
+
+                    contact.offerType = cursor.getString(9)
                     // Adding contact to list
 
                     contactList.add(contact)
@@ -1395,7 +1413,7 @@ class DBHelper(context: Context?) :
 
 
     companion object {
-        private const val DATABASE_VERSION = 3
+        private const val DATABASE_VERSION = 4
         const val DATABASE_NAME = "Lieferin.db"
         const val ITEM_INFO_TABLE_NAME = "item_info"
         const val CATEGORY_COLUMN_ID = "category_id"
@@ -1412,6 +1430,7 @@ class DBHelper(context: Context?) :
         const val MENU_CATEGORY_ID = "menu_category_id"
         const val MENU_RESTAURANT_ID = "menuRestaurantId"
         const val MENU_NOTES_ID = "menuNotesId"
+        const val MENU_INFO_OFFER_TYPE = "menu_info_offer_type"
         const val TOPPINS_GROUP_INFO_TABLE_NAME = "toppins_group_info"
         const val TOPPINS_GROUP_ID = "toppinsGroupId"
         const val TOPPINS_GROUP_NAME = "toppinsGroupName"

@@ -212,6 +212,12 @@ class DetailPageActivity : Fragment(), AppBarLayout.OnOffsetChangedListener, Vie
 
     var openStatusTV: TextView? = null
 
+    var share : ImageView? = null
+
+    var link : String? = ""
+
+    var offerType : String? = ""
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -243,6 +249,14 @@ class DetailPageActivity : Fragment(), AppBarLayout.OnOffsetChangedListener, Vie
 
         filterLL!!.setOnClickListener(this)
 
+        share= rootView!!.findViewById(R.id.share) as ImageView
+
+        share!!.setOnClickListener(this)
+
+        share!!.setColorFilter(
+            colorIcon(activity!!, R.color.colorWhite, R.drawable.share_img, share!!),
+            PorterDuff.Mode.SRC_ATOP
+        )
         aboutUsLinearLayout = rootView!!.findViewById(R.id.aboutUsLinearLayout) as LinearLayout
 
         aboutUsLinearLayout!!.setOnClickListener(this)
@@ -770,6 +784,15 @@ class DetailPageActivity : Fragment(), AppBarLayout.OnOffsetChangedListener, Vie
                 val bundle = Bundle()
                 bundle.putString("restaurantReferenceCode", "" + title)
                 callBlacklisting!!.fragmentChange("SearchActivity", bundle)
+
+            }
+
+            R.id.share -> {
+
+                val bundle = Bundle()
+                bundle.putString("link", "" + link)
+                callBlacklisting!!.fragmentChange("Share", bundle)
+
 
             }
 
@@ -1756,7 +1779,6 @@ class DetailPageActivity : Fragment(), AppBarLayout.OnOffsetChangedListener, Vie
 
                         count = count + 1
 
-
                         //customText(activity!!,"€ " + categoryData!!.get(i).menusList.get(j).price+" Plus Taxes",",7,"SemiBold","")
 
                         /*priceValue = priceValue + position!!
@@ -2239,6 +2261,10 @@ class DetailPageActivity : Fragment(), AppBarLayout.OnOffsetChangedListener, Vie
                     hotelName!!.setText((responseObj as BaseRS).fetchData!!.restaurantData!!.restaurantName)
 
                     timeTV!!.setText((responseObj as BaseRS).fetchData!!.restaurantData!!.distance+" KM")
+
+                    link = (responseObj as BaseRS).fetchData!!.restaurantData!!.website
+
+
 
                     if((responseObj as BaseRS).fetchData!!.restaurantData!!.minimumOrder != null) {
 

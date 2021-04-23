@@ -423,6 +423,8 @@ class StripePaymentGateway : AppCompatActivity(),View.OnClickListener,ResponseLi
             cardPay!!.visibility = View.VISIBLE
         }else if(Constant.PayMentType!!.equals("3")){
             cardPay!!.visibility = View.GONE
+        }else if(Constant.PayMentType!!.equals("1")){
+            cardPay!!.visibility = View.GONE
         }
 
         if(Constant.AppType!!.equals("0")) {
@@ -606,8 +608,19 @@ class StripePaymentGateway : AppCompatActivity(),View.OnClickListener,ResponseLi
                 } else {
 
                 }
-            }else{
+            }else if(Constant.PayMentType!!.equals("3")) {
                 processPayment()
+            }else if(Constant.PayMentType!!.equals("1")) {
+
+                if (Constant.AppType.equals("0")) {
+                    loadingScreen(this)
+                    Log.v("Google", "" + createWebServiceFood("COD"))
+                    RequestManager.setBookingFoodOrder(this, createWebServiceFood("COD"), this)
+                } else {
+                    loadingScreen(this)
+                    Log.v("GoogleGeocery", "" + createWebService("COD"))
+                    RequestManager.setBookingGroceryOrder(this, createWebService("COD"), this)
+                }
             }
         }
         //successLayout!!.setOnClickListener(this)
@@ -615,11 +628,11 @@ class StripePaymentGateway : AppCompatActivity(),View.OnClickListener,ResponseLi
 
     fun webServiceCoupon()
     {
+        loadingScreen(this)
         val obj = JSONObject()
         obj.put("token", "" + dbHelper!!.getUserDetails().token)
         obj.put("promocode", "" + CouponCode)
         obj.put("postcode", ""+ Constant.customerPincode)
-
 
         Log.v("mmmmmmm","==="+obj);
         RequestManager.setCheckRestaurantPromoOffer(this,obj,this)
@@ -627,6 +640,7 @@ class StripePaymentGateway : AppCompatActivity(),View.OnClickListener,ResponseLi
 
     fun webServiceGroceryCoupon()
     {
+        loadingScreen(this)
         val obj = JSONObject()
         obj.put("token", "" + dbHelper!!.getUserDetails().token)
         obj.put("promocode", "" + CouponCode)
@@ -753,13 +767,16 @@ class StripePaymentGateway : AppCompatActivity(),View.OnClickListener,ResponseLi
                         val paymentDetails = confirmation.toJSONObject().toString(4)
                         if(Constant.BookingType.equals("0")) {
                             if (Constant.AppType.equals("0")) {
+                                loadingScreen(this)
                                 Log.v("Google", "" + createWebServiceFood("PayPal"))
                                 RequestManager.setBookingFoodOrder(this, createWebServiceFood("PayPal"), this)
                             } else {
+                                loadingScreen(this)
                                 Log.v("GoogleGeocery", "" + createWebService("PayPal"))
                                 RequestManager.setBookingGroceryOrder(this, createWebService("PayPal"), this)
                             }
                         }else{
+                            loadingScreen(this)
                             Log.v("Google", "" + createWebServiceTable("PayPal"))
                             RequestManager.setTableReservtionMenuPicked(this, createWebServiceTable("PayPal"), this)
                         }
@@ -933,7 +950,11 @@ class StripePaymentGateway : AppCompatActivity(),View.OnClickListener,ResponseLi
         obj.put("bookingAmount", ""+ Constant.totalPrice.replace("€ ",""))
         obj.put("totalQuantity", ""+ Constant.quality)
         obj.put("paymentMode", ""+Payment)
-        obj.put("paymentType", "1")
+        if(Payment!!.equals("COD")) {
+            obj.put("paymentType", "2")
+        }else {
+            obj.put("paymentType", "1")
+        }
         obj.put("distance", ""+distanceValue)
         obj.put("customerAddressId", ""+customerAddressId)
         obj.put("deliveryFare", ""+deliveryFare)
@@ -1133,7 +1154,11 @@ class StripePaymentGateway : AppCompatActivity(),View.OnClickListener,ResponseLi
         obj.put("bookingAmount", ""+ Constant.totalPrice.replace("€ ",""))
         obj.put("totalQuantity", ""+ Constant.quality)
         obj.put("paymentMode", ""+Payment)
-        obj.put("paymentType", "1")
+        if(Payment!!.equals("COD")) {
+            obj.put("paymentType", "2")
+        }else {
+            obj.put("paymentType", "1")
+        }
         obj.put("distance", ""+distanceValue)
         obj.put("customerAddressId", ""+customerAddressId)
         obj.put("deliveryFare", ""+deliveryFare)
@@ -1195,6 +1220,8 @@ class StripePaymentGateway : AppCompatActivity(),View.OnClickListener,ResponseLi
     override fun onResponseReceived(responseObj: Any?, requestType: Int) {
         if(responseObj != null) {
             if (requestType == Constant.MEMBER_getBookingFoodOrder_URL_RQ) {
+
+                loadingScreenClose(this)
 
                 showToast(this,(responseObj as BaseRS).message)
                 if((responseObj as BaseRS).status.equals("5102"))
@@ -1406,13 +1433,16 @@ class StripePaymentGateway : AppCompatActivity(),View.OnClickListener,ResponseLi
     {
         if(Constant.BookingType.equals("0")) {
             if (Constant.AppType.equals("0")) {
+                loadingScreen(this)
                 Log.v("Google", "" + createWebServiceFood(Payment))
                 RequestManager.setBookingFoodOrder(this, createWebServiceFood(Payment), this)
             } else {
+                loadingScreen(this)
                 Log.v("GoogleGrocery", "" + createWebService(Payment))
                 RequestManager.setBookingGroceryOrder(this, createWebService(Payment), this)
             }
         }else{
+            loadingScreen(this)
             Log.v("Google", "" + createWebServiceTable(Payment))
             RequestManager.setTableReservtionMenuPicked(this, createWebServiceTable(Payment), this)
         }

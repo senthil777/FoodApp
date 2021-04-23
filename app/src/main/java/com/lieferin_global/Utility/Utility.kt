@@ -231,10 +231,28 @@ fun addIncreaseDoubleValue(count: String): Int {
     return addValue
 }
 
+fun addIncreaseDoubleOrderValue(count: String): Int {
+    var addValue: Int
+
+    addValue = count.toInt() + 2
+
+    return addValue
+}
+
 fun addIncreasePrice(orgValue: String,price: String): Double {
     var addValue: Double
 
     addValue = orgValue.toDouble() + price.toDouble()
+
+    return addValue
+}
+
+fun addIncreasePriceByeOneGetOne(orgValue: String,price: String): Double {
+    var addValue: Double
+
+    addValue = orgValue.toDouble() + price.toDouble()
+
+    addValue = addValue / 2.0
 
     return addValue
 }
@@ -250,6 +268,16 @@ fun addIncreasePriceDivide(orgValue: String,price: String): Double {
     var addValue: Double
 
     addValue = orgValue.toDouble() / price.toDouble()
+
+    return addValue
+}
+
+fun addIncreasePriceDivideBuyOne(orgValue: String): Double {
+    var addValue: Double
+
+
+
+    addValue = orgValue.toDouble() / 2.0
 
     return addValue
 }
@@ -275,6 +303,22 @@ fun addDecrease(count: String): Int {
     var addValue: Int
 
     addValue = count.toInt() - 1
+
+    return addValue
+}
+
+fun buyOneGetOne(price:String): Double {
+    var addValue: Double
+
+    addValue = price.toDouble() * 2
+
+    return addValue
+}
+
+fun addDecreaseType(count: String): Int {
+    var addValue: Int
+
+    addValue = count.toInt() - 2
 
     return addValue
 }

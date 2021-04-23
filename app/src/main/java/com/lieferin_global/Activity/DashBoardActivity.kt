@@ -2185,7 +2185,18 @@ class DashBoardActivity : AppCompatActivity(), SlideMenu_item_Adpt.CallbackDataA
             val activityFragment: Fragment = AddGroupDetailsFragment()
             activityFragment.arguments = bundle
             loadFragment(activityFragment, "GroupList")
-        } else if (fragment!!.equals("Home")) {
+        } else if (fragment!!.equals("Share")) {
+            try {
+                val shareIntent = Intent(Intent.ACTION_SEND)
+                shareIntent.setType("text/plain")
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Lieferin")
+
+                shareIntent.putExtra(Intent.EXTRA_TEXT, ""+ bundle!!.get("link"))
+                startActivity(Intent.createChooser(shareIntent, "choose one"))
+            } catch (e: Exception) {
+                //e.toString();
+            }
+        }else if (fragment!!.equals("Home")) {
             if(!dbHelper!!.getUserDetails().profilePicture.equals("")) {
                 Picasso.with(this).load(dbHelper!!.getUserDetails().profilePicture).resize(450, 450)
                     .placeholder(R.drawable.place_holder).into(profileImg)
